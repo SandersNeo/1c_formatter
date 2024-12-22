@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.17">
+	<ConfigVersions>
+		<Metadata name="Configuration.ОформляторМодулей" id="48ed6e6c-cfb5-4513-a303-4fd07949486f" configVersion="b7f0cea4a41eadc8f2db90b50fe8a3d442e9581d"/>
+		<Metadata name="DataProcessor.ОМ_Компонент_ГенерацияТекстовМодулей" id="99adbb92-b11a-4231-966a-0514d253dd98" configVersion="1ec5f99e7f303584dc0e5fb96580dc9107c342bf"/>
+		<Metadata name="DataProcessor.ОМ_Компонент_ГенерацияТекстовМодулей.Form.ФормаВыводаТекстов" id="c80bc4a1-bcf0-43ed-859d-eed8108b909e" configVersion="e49f2d8b4813b321c06fa7a5bbb522c9cbeb93c9"/>
+		<Metadata name="DataProcessor.ОМ_Компонент_ГенерацияТекстовМодулей.Form.ФормаВыводаТекстов.Form" id="c80bc4a1-bcf0-43ed-859d-eed8108b909e.0" configVersion="d0b8508e51bfe375bc58d676468b102385497eac"/>
+		<Metadata name="DataProcessor.ОМ_Компонент_ГенерацияТекстовМодулей.ManagerModule" id="99adbb92-b11a-4231-966a-0514d253dd98.2" configVersion="e2f81564b7f2295a277279052b1e5b2a85401ef6"/>
+		<Metadata name="DataProcessor.ОМ_Компонент_ГенерацияТекстовМодулей.ObjectModule" id="99adbb92-b11a-4231-966a-0514d253dd98.0" configVersion="aaea137f4d2c3b7036c501394855860f4d171e26"/>
+		<Metadata name="DataProcessor.ОМ_Компонент_РасстановкаОбластей" id="f2268fc3-6b57-41b5-90f1-264961e30009" configVersion="c0724cdd1dc833d219325bbccc0d18c63f6f1246">
+			<Metadata name="DataProcessor.ОМ_Компонент_РасстановкаОбластей.Attribute.АнглийскийВариантВстроенногоЯзыка" id="f308410a-d4bc-4518-a704-8e0f9913796d"/>
+		</Metadata>
+		<Metadata name="DataProcessor.ОМ_Компонент_РасстановкаОбластей.Form.Форма" id="73e3d77f-395d-4784-b9cd-e176b6101ca4" configVersion="e71ea59962e2e27c4b4a4011451b08367179b309"/>
+		<Metadata name="DataProcessor.ОМ_Компонент_РасстановкаОбластей.Form.Форма.Form" id="73e3d77f-395d-4784-b9cd-e176b6101ca4.0" configVersion="2ea0a93040ed356d6e3a78d3c07c25615e16ee25"/>
+		<Metadata name="DataProcessor.ОМ_Компонент_РасстановкаОбластей.ObjectModule" id="f2268fc3-6b57-41b5-90f1-264961e30009.0" configVersion="0497a597a9ab1590edd7721939802b9085bf45c9"/>
+		<Metadata name="DataProcessor.ОМ_Компонент_УстановкаИнструкцийПрепроцессора" id="eb388f49-0915-4569-b15e-2ca357459806" configVersion="3444568bf0ab2d573e0304f7b37e1eaaef1d92c4"/>
+		<Metadata name="DataProcessor.ОМ_Компонент_УстановкаИнструкцийПрепроцессора.ObjectModule" id="eb388f49-0915-4569-b15e-2ca357459806.0" configVersion="92c6372b77a8a6ddebba7e75394aa8a802025fd1"/>
+		<Metadata name="DataProcessor.ОМ_ОформляторМодулей" id="a971f25c-c762-4551-81de-8bab0bc1ecfb" configVersion="b2a6ff90cd275c6f468bd411454e15f9e823c651"/>
+		<Metadata name="DataProcessor.ОМ_ОформляторМодулей.Form.Форма" id="aade49fa-01c9-422f-b0af-d06300293814" configVersion="d105459734ccbea3564e691b3e4d867a582d3782"/>
+		<Metadata name="DataProcessor.ОМ_ОформляторМодулей.Form.Форма.Form" id="aade49fa-01c9-422f-b0af-d06300293814.0" configVersion="0a03c503b0b964d03ac63386ab1ae127e00ed44a"/>
+		<Metadata name="DataProcessor.ОМ_ОформляторМодулей.Form.ФормаВводаТекстаМодуля" id="6c76143d-3cae-47d7-b5ad-2e0cc76849dc" configVersion="83bb9825d8503f5df7f212a4eb2bcea3e7588ee2"/>
+		<Metadata name="DataProcessor.ОМ_ОформляторМодулей.Form.ФормаВводаТекстаМодуля.Form" id="6c76143d-3cae-47d7-b5ad-2e0cc76849dc.0" configVersion="ffb014bf8e92f0d58f99f7d98a1f5891fe5f4050"/>
+		<Metadata name="DataProcessor.ОМ_ОформляторМодулей.Form.ФормаГенерацииОписанияМетода" id="9cda9b24-772b-44f9-96de-daebe639c706" configVersion="e3fb2b002502611d29fa56f955a12985bd07b26b"/>
+		<Metadata name="DataProcessor.ОМ_ОформляторМодулей.Form.ФормаГенерацииОписанияМетода.Form" id="9cda9b24-772b-44f9-96de-daebe639c706.0" configVersion="0c1b086df4a45789e81836a88d9122151c231ff9"/>
+		<Metadata name="DataProcessor.ОМ_ОформляторМодулей.ManagerModule" id="a971f25c-c762-4551-81de-8bab0bc1ecfb.2" configVersion="5cfd66a69f4d9c7cf4537fbbdeda96050ddf369f"/>
+		<Metadata name="DataProcessor.ОМ_ОформляторМодулей.ObjectModule" id="a971f25c-c762-4551-81de-8bab0bc1ecfb.0" configVersion="54d55857cb4a99d09dc25c3d9232b94edcd1a7f5"/>
+		<Metadata name="DataProcessor.ОМ_Парсер_ГлобальноеОкружение" id="d4b92b78-5b9b-4ba3-9b07-adefe94c97b0" configVersion="39c5ee450b1a9c8b22762b39e3be6995191cc162"/>
+		<Metadata name="DataProcessor.ОМ_Парсер_ГлобальноеОкружение.ObjectModule" id="d4b92b78-5b9b-4ba3-9b07-adefe94c97b0.0" configVersion="20b3b387a901deeaa17a55d1e976b45ebcef1426"/>
+		<Metadata name="DataProcessor.ОМ_Парсер_ПарсерВстроенногоЯзыка" id="b9039612-c0da-4e37-992a-e873aca0506c" configVersion="679b972a84b7cee18da729cb0f8ee1c1d3ababe4"/>
+		<Metadata name="DataProcessor.ОМ_Парсер_ПарсерВстроенногоЯзыка.ObjectModule" id="b9039612-c0da-4e37-992a-e873aca0506c.0" configVersion="00e9bf22b499a2903136ab3232b233cd8c31bc8f"/>
+		<Metadata name="DataProcessor.ОМ_Парсер_ПлагинАнализМодуля" id="a55bfa01-f07d-4a13-8103-ad3a4b1270c8" configVersion="9a6c98b0fc85924706c1e35e74cdf7f8e764d479"/>
+		<Metadata name="DataProcessor.ОМ_Парсер_ПлагинАнализМодуля.ObjectModule" id="a55bfa01-f07d-4a13-8103-ad3a4b1270c8.0" configVersion="5d3a068cb82d629dcb27351e3c2d2e428cb42ab0"/>
+		<Metadata name="Language.Русский" id="eda9d8e8-5922-48d2-806f-122d7f8d0865" configVersion="4c969e764b8985d060bb8afba5dbf17520b4b832"/>
+		<Metadata name="Role.ОМ_ОсновнаяРоль" id="a7f61dc1-a28f-495d-bc94-a2e1948d7307" configVersion="5a63ca86e50583807b17986272f12b66f699803c"/>
+		<Metadata name="Subsystem.ОМ_ОбработкаМодулей" id="8a16f250-3071-4158-967b-fa1866473d59" configVersion="56f0d037f5c17e5374906db4e96cc2cd353d5864"/>
+		<Metadata name="Subsystem.ОМ_Оформлятор" id="795bdcdf-9ec7-42f4-a039-696f545a4325" configVersion="b3ca06f0f2aac1cf9c56d1afaff8fbe2f98a1cc4"/>
+		<Metadata name="Subsystem.ОМ_ПарсерКода" id="533791a6-5859-42af-8f50-c6be74f0d83a" configVersion="f5222a1011981f994a8851254afe8809c787649a"/>
+	</ConfigVersions>
+</ConfigDumpInfo>
