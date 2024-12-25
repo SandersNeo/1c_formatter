@@ -158,20 +158,20 @@
 													</Button>
 												</ChildItems>
 											</Popup>
-											<Popup name="СтруктураМодуляОбработка" id="314">
+											<Popup name="СтруктураМодуляДействия" id="314">
 												<Title>
 													<v8:item>
 														<v8:lang>ru</v8:lang>
-														<v8:content>Обработка</v8:content>
+														<v8:content>Действия</v8:content>
 													</v8:item>
 												</Title>
 												<ToolTip>
 													<v8:item>
 														<v8:lang>ru</v8:lang>
-														<v8:content>Структура модуля обработка</v8:content>
+														<v8:content>Структура модуля действия</v8:content>
 													</v8:item>
 												</ToolTip>
-												<ExtendedTooltip name="СтруктураМодуляОбработкаРасширеннаяПодсказка" id="315"/>
+												<ExtendedTooltip name="СтруктураМодуляДействияРасширеннаяПодсказка" id="315"/>
 												<ChildItems>
 													<Button name="РаспределитьПоОбластям" id="194">
 														<Type>CommandBarButton</Type>
