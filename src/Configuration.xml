@@ -65,8 +65,6 @@
 		</Properties>
 		<ChildObjects>
 			<Language>Русский</Language>
-			<Subsystem>ОМ_ПарсерКода</Subsystem>
-			<Subsystem>ОМ_Действия</Subsystem>
 			<Subsystem>ОМ_Оформлятор</Subsystem>
 			<Role>ОМ_ОсновнаяРоль</Role>
 			<DataProcessor>ОМ_ОформляторМодулей</DataProcessor>

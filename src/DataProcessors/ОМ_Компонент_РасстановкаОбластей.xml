@@ -63,6 +63,7 @@
 				</Properties>
 			</Attribute>
 			<Form>Форма</Form>
+			<Template>СоответствиеИменМетодовИОбластей</Template>
 		</ChildObjects>
 	</DataProcessor>
 </MetaDataObject>

@@ -188,11 +188,6 @@
 												</ToolTip>
 												<ExtendedTooltip name="СтруктураМодуляДействияРасширеннаяПодсказка" id="315"/>
 												<ChildItems>
-													<Button name="РаспределитьПоОбластям" id="194">
-														<Type>CommandBarButton</Type>
-														<CommandName>Form.Command.РаспределитьПоОбластям</CommandName>
-														<ExtendedTooltip name="РаспределитьПоОбластямРасширеннаяПодсказка" id="195"/>
-													</Button>
 													<Popup name="СтруктураМодуляОбработкиДополнительные" id="316">
 														<Title>
 															<v8:item>
@@ -207,25 +202,7 @@
 															</v8:item>
 														</ToolTip>
 														<ExtendedTooltip name="СтруктураМодуляОбработкиДополнительныеРасширеннаяПодсказка" id="317"/>
-														<ChildItems>
-															<Button name="СтруктураМодуляУстановитьИнструкцииПрепроцессораДляМодуляМенеджера" id="289">
-																<Type>CommandBarButton</Type>
-																<CommandName>Form.Command.УстановитьИнструкцииПрепроцессораДляМодуляМенеджера</CommandName>
-																<ExtendedTooltip name="СтруктураМодуляУстановитьИнструкцииПрепроцессораДляМодуляМенеджераРасширеннаяПодсказка" id="290"/>
-															</Button>
-														</ChildItems>
 													</Popup>
-													<Button name="ГенерироватьТекстМодуля" id="192">
-														<Type>CommandBarButton</Type>
-														<CommandName>Form.Command.ГенерироватьТекстМодуля</CommandName>
-														<Title>
-															<v8:item>
-																<v8:lang>ru</v8:lang>
-																<v8:content>Сформировать тексты модулей...</v8:content>
-															</v8:item>
-														</Title>
-														<ExtendedTooltip name="ГенерироватьТекстМодуляРасширеннаяПодсказка" id="193"/>
-													</Button>
 												</ChildItems>
 											</Popup>
 											<Button name="ОчиститьДеревоСтруктуры" id="318">
@@ -2065,6 +2042,21 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
+				<Column name="ИмяКоманды" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя команды</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
 			</Columns>
 		</Attribute>
 	</Attributes>
@@ -2098,51 +2090,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ДобавитьПодчиненныйВидЭлемента</Action>
-		</Command>
-		<Command name="ГенерироватьТекстМодуля" id="3">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Генерировать текст модуля</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Генерировать текст модуля</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>ГенерироватьТекстМодуля</Action>
-		</Command>
-		<Command name="РаспределитьПоОбластям" id="4">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Распределить по областям</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Распределить по областям</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>РаспределитьПоОбластям</Action>
-		</Command>
-		<Command name="УстановитьИнструкцииПрепроцессораДляМодуляМенеджера" id="5">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Установить инструкции препроцессора для модуля менеджера</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Установить инструкции препроцессора для модуля менеджера</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>УстановитьИнструкцииПрепроцессораДляМодуляМенеджера</Action>
 		</Command>
 		<Command name="Протестировать" id="6">
 			<Title>
@@ -2218,21 +2165,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОчиститьДеревоСтруктуры</Action>
-		</Command>
-		<Command name="АнализВызовов" id="11">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Анализ вызовов</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Анализ вызовов</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>АнализВызовов</Action>
 		</Command>
 	</Commands>
 </Form>

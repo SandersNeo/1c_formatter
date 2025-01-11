@@ -21,7 +21,7 @@
 			</Synonym>
 			<Comment/>
 			<UseStandardCommands>false</UseStandardCommands>
-			<DefaultForm/>
+			<DefaultForm>DataProcessor.ОМ_Компонент_ГенерацияТекстовМодулей.Form.ФормаВыводаТекстов</DefaultForm>
 			<AuxiliaryForm/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<ExtendedPresentation/>
