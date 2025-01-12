@@ -8206,154 +8206,6 @@
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>ПРИОКОНЧАНИИРЕДАКТИРОВАНИЯ</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">ПРИОКОНЧАНИИРЕДАКТИРОВАНИЯ</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ONEDITEND</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">ONEDITEND</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ОбработчикиСобытийЭлементовШапкиФормы</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">ОбработчикиСобытийЭлементовШапкиФормы</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ЭлементФормы</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>100</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>130</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-		</row>
-	</rowsItem>
-	<rowsItem>
-		<index>114</index>
-		<row>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ПЕРЕДУДАЛЕНИЕМ</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">ПЕРЕДУДАЛЕНИЕМ</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>BEFOREDELETE</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">BEFOREDELETE</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ОбработчикиСобытийЭлементовШапкиФормы</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">ОбработчикиСобытийЭлементовШапкиФормы</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ЭлементФормы</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>100</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>140</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-		</row>
-	</rowsItem>
-	<rowsItem>
-		<index>115</index>
-		<row>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
 							<v8:content>ОБРАБОТКАФОРМИРОВАНИЯКОМАНД</v8:content>
 						</v8:item>
 					</tl>
@@ -8420,7 +8272,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>116</index>
+		<index>114</index>
 		<row>
 			<c>
 				<c>
@@ -8494,7 +8346,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>117</index>
+		<index>115</index>
 		<row>
 			<c>
 				<c>
@@ -8568,7 +8420,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>118</index>
+		<index>116</index>
 		<row>
 			<c>
 				<c>
@@ -8642,7 +8494,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>119</index>
+		<index>117</index>
 		<row>
 			<c>
 				<c>
@@ -8716,7 +8568,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>120</index>
+		<index>118</index>
 		<row>
 			<c>
 				<c>
@@ -8790,7 +8642,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>121</index>
+		<index>119</index>
 		<row>
 			<c>
 				<c>
@@ -8864,7 +8716,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>122</index>
+		<index>120</index>
 		<row>
 			<c>
 				<c>
@@ -8938,7 +8790,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>123</index>
+		<index>121</index>
 		<row>
 			<c>
 				<c>
@@ -9012,7 +8864,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>124</index>
+		<index>122</index>
 		<row>
 			<c>
 				<c>
@@ -9086,7 +8938,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>125</index>
+		<index>123</index>
 		<row>
 			<c>
 				<c>
@@ -9160,7 +9012,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>126</index>
+		<index>124</index>
 		<row>
 			<c>
 				<c>
@@ -9234,7 +9086,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>127</index>
+		<index>125</index>
 		<row>
 			<c>
 				<c>
@@ -9308,155 +9160,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>128</index>
-		<row>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ПРИАКТИВИЗАЦИИСТРОКИ</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">ПРИАКТИВИЗАЦИИСТРОКИ</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ONACTIVATEROW</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">ONACTIVATEROW</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ОбработчикиСобытийЭлементовШапкиФормы</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">ОбработчикиСобытийЭлементовШапкиФормы</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ЭлементФормы</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>100</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>1 010</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-		</row>
-	</rowsItem>
-	<rowsItem>
-		<index>129</index>
-		<row>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ПРИИЗМЕНЕНИИФЛАЖКА</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">ПРИИЗМЕНЕНИИФЛАЖКА</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ONCHECKCHANGE</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">ONCHECKCHANGE</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ОбработчикиСобытийЭлементовШапкиФормы</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">ОбработчикиСобытийЭлементовШапкиФормы</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ЭлементФормы</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>100</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>1 020</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-		</row>
-	</rowsItem>
-	<rowsItem>
-		<index>130</index>
+		<index>126</index>
 		<row>
 			<c>
 				<c>
@@ -9530,81 +9234,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>131</index>
-		<row>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ПРИИЗМЕНЕНИИСОДЕРЖИМОГООБЛАСТИ</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">ПРИИЗМЕНЕНИИСОДЕРЖИМОГООБЛАСТИ</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ONCHANGEAREACONTENT</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">ONCHANGEAREACONTENT</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ОбработчикиСобытийЭлементовШапкиФормы</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">ОбработчикиСобытийЭлементовШапкиФормы</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ЭлементФормы</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>100</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>1 100</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-		</row>
-	</rowsItem>
-	<rowsItem>
-		<index>132</index>
+		<index>127</index>
 		<row>
 			<c>
 				<c>
@@ -9678,377 +9308,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>133</index>
-		<row>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>НАЧАЛОПЕРЕТАСКИВАНИЯ</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">НАЧАЛОПЕРЕТАСКИВАНИЯ</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>DRAGSTART</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">DRAGSTART</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ОбработчикиСобытийЭлементовШапкиФормы</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">ОбработчикиСобытийЭлементовШапкиФормы</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ЭлементФормы</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>100</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>1 170</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-		</row>
-	</rowsItem>
-	<rowsItem>
-		<index>134</index>
-		<row>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ПРОВЕРКАПЕРЕТАСКИВАНИЯ</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">ПРОВЕРКАПЕРЕТАСКИВАНИЯ</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>DRAGCHECK</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">DRAGCHECK</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ОбработчикиСобытийЭлементовШапкиФормы</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">ОбработчикиСобытийЭлементовШапкиФормы</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ЭлементФормы</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>100</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>1 180</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-		</row>
-	</rowsItem>
-	<rowsItem>
-		<index>135</index>
-		<row>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ПРОВЕРКАПЕРЕТАСКИВАНИЯВНУТРИ</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">ПРОВЕРКАПЕРЕТАСКИВАНИЯВНУТРИ</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>INSIDEDRAGCHECK</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">INSIDEDRAGCHECK</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ОбработчикиСобытийЭлементовШапкиФормы</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">ОбработчикиСобытийЭлементовШапкиФормы</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ЭлементФормы</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>100</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>1 185</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-		</row>
-	</rowsItem>
-	<rowsItem>
-		<index>136</index>
-		<row>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ОКОНЧАНИЕПЕРЕТАСКИВАНИЯ</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">ОКОНЧАНИЕПЕРЕТАСКИВАНИЯ</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>DRAGEND</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">DRAGEND</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ОбработчикиСобытийЭлементовШапкиФормы</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">ОбработчикиСобытийЭлементовШапкиФормы</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ЭлементФормы</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>100</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>1 190</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-		</row>
-	</rowsItem>
-	<rowsItem>
-		<index>137</index>
-		<row>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ПЕРЕТАСКИВАНИЕ</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">ПЕРЕТАСКИВАНИЕ</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>DRAG</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">DRAG</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ОбработчикиСобытийЭлементовШапкиФормы</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">ОбработчикиСобытийЭлементовШапкиФормы</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ЭлементФормы</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>100</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>1 200</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-		</row>
-	</rowsItem>
-	<rowsItem>
-		<index>138</index>
+		<index>128</index>
 		<row>
 			<c>
 				<c>
@@ -10122,81 +9382,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>139</index>
-		<row>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ПРИОБНОВЛЕНИИСОСТАВАПОЛЬЗОВАТЕЛЬСКИХНАСТРОЕКНАСЕРВЕРЕ</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">ПРИОБНОВЛЕНИИСОСТАВАПОЛЬЗОВАТЕЛЬСКИХНАСТРОЕКНАСЕРВЕРЕ</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ONUPDATEUSERSETTINGSETATSERVER</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">ONUPDATEUSERSETTINGSETATSERVER</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ОбработчикиСобытийЭлементовШапкиФормы</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">ОбработчикиСобытийЭлементовШапкиФормы</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ЭлементФормы</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>100</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>1 440</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-		</row>
-	</rowsItem>
-	<rowsItem>
-		<index>140</index>
+		<index>129</index>
 		<row>
 			<c>
 				<c>
@@ -10270,81 +9456,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>141</index>
-		<row>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ПРИИЗМЕНЕНИИ</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">ПРИИЗМЕНЕНИИ</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ONCHANGE</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">ONCHANGE</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ОбработчикиСобытийЭлементовТаблицыФормы</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">ОбработчикиСобытийЭлементовТаблицыФормы</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ТаблицаФормы</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>150</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>10</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-		</row>
-	</rowsItem>
-	<rowsItem>
-		<index>142</index>
+		<index>130</index>
 		<row>
 			<c>
 				<c>
@@ -10418,7 +9530,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>143</index>
+		<index>131</index>
 		<row>
 			<c>
 				<c>
@@ -10492,7 +9604,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>144</index>
+		<index>132</index>
 		<row>
 			<c>
 				<c>
@@ -10566,7 +9678,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>145</index>
+		<index>133</index>
 		<row>
 			<c>
 				<c>
@@ -10640,7 +9752,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>146</index>
+		<index>134</index>
 		<row>
 			<c>
 				<c>
@@ -10714,7 +9826,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>147</index>
+		<index>135</index>
 		<row>
 			<c>
 				<c>
@@ -10788,7 +9900,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>148</index>
+		<index>136</index>
 		<row>
 			<c>
 				<c>
@@ -10862,7 +9974,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>149</index>
+		<index>137</index>
 		<row>
 			<c>
 				<c>
@@ -10936,7 +10048,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>150</index>
+		<index>138</index>
 		<row>
 			<c>
 				<c>
@@ -11010,81 +10122,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>151</index>
-		<row>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ПЕРЕДНАЧАЛОМДОБАВЛЕНИЯ</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">ПЕРЕДНАЧАЛОМДОБАВЛЕНИЯ</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>BEFOREADDLINE</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">BEFOREADDLINE</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ОбработчикиСобытийЭлементовТаблицыФормы</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">ОбработчикиСобытийЭлементовТаблицыФормы</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ТаблицаФормы</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>150</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>1 050</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-		</row>
-	</rowsItem>
-	<rowsItem>
-		<index>152</index>
+		<index>139</index>
 		<row>
 			<c>
 				<c>
@@ -11158,7 +10196,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>153</index>
+		<index>140</index>
 		<row>
 			<c>
 				<c>
@@ -11232,7 +10270,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>154</index>
+		<index>141</index>
 		<row>
 			<c>
 				<c>
@@ -11306,7 +10344,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>155</index>
+		<index>142</index>
 		<row>
 			<c>
 				<c>
@@ -11380,7 +10418,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>156</index>
+		<index>143</index>
 		<row>
 			<c>
 				<c>
@@ -11454,81 +10492,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>157</index>
-		<row>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ПОСЛЕУДАЛЕНИЯ</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">ПОСЛЕУДАЛЕНИЯ</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>AFTERDELETELINE</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">AFTERDELETELINE</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ОбработчикиСобытийЭлементовТаблицыФормы</v8:content>
-						</v8:item>
-					</tl>
-					<d xsi:type="xs:string">ОбработчикиСобытийЭлементовТаблицыФормы</d>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ТаблицаФормы</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>150</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>9</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>1 075</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-		</row>
-	</rowsItem>
-	<rowsItem>
-		<index>158</index>
+		<index>144</index>
 		<row>
 			<c>
 				<c>
@@ -11602,7 +10566,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>159</index>
+		<index>145</index>
 		<row>
 			<c>
 				<c>
@@ -11676,7 +10640,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>160</index>
+		<index>146</index>
 		<row>
 			<c>
 				<c>
@@ -11750,7 +10714,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>161</index>
+		<index>147</index>
 		<row>
 			<c>
 				<c>
@@ -11824,7 +10788,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>162</index>
+		<index>148</index>
 		<row>
 			<c>
 				<c>
@@ -11898,7 +10862,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>163</index>
+		<index>149</index>
 		<row>
 			<c>
 				<c>
@@ -11972,7 +10936,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>164</index>
+		<index>150</index>
 		<row>
 			<c>
 				<c>
@@ -12046,7 +11010,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>165</index>
+		<index>151</index>
 		<row>
 			<c>
 				<c>
@@ -12120,7 +11084,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>166</index>
+		<index>152</index>
 		<row>
 			<c>
 				<c>
@@ -12194,7 +11158,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>167</index>
+		<index>153</index>
 		<row>
 			<c>
 				<c>
@@ -12268,7 +11232,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>168</index>
+		<index>154</index>
 		<row>
 			<c>
 				<c>
@@ -12342,7 +11306,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>169</index>
+		<index>155</index>
 		<row>
 			<c>
 				<c>
@@ -12416,7 +11380,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>170</index>
+		<index>156</index>
 		<row>
 			<c>
 				<c>
@@ -12490,7 +11454,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>171</index>
+		<index>157</index>
 		<row>
 			<c>
 				<c>
@@ -12564,7 +11528,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>172</index>
+		<index>158</index>
 		<row>
 			<c>
 				<c>
@@ -12638,7 +11602,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>173</index>
+		<index>159</index>
 		<row>
 			<c>
 				<c>
@@ -12712,7 +11676,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>174</index>
+		<index>160</index>
 		<row>
 			<c>
 				<c>
@@ -12786,7 +11750,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>175</index>
+		<index>161</index>
 		<row>
 			<c>
 				<c>
@@ -12860,7 +11824,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>176</index>
+		<index>162</index>
 		<row>
 			<c>
 				<c>
@@ -12934,7 +11898,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>177</index>
+		<index>163</index>
 		<row>
 			<c>
 				<c>
@@ -13008,7 +11972,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>178</index>
+		<index>164</index>
 		<row>
 			<c>
 				<c>
@@ -13082,7 +12046,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>179</index>
+		<index>165</index>
 		<row>
 			<c>
 				<c>
@@ -13156,7 +12120,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>180</index>
+		<index>166</index>
 		<row>
 			<c>
 				<c>
@@ -13230,7 +12194,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>181</index>
+		<index>167</index>
 		<row>
 			<c>
 				<c>
@@ -13304,7 +12268,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>182</index>
+		<index>168</index>
 		<row>
 			<c>
 				<c>
@@ -13379,8 +12343,8 @@
 	</rowsItem>
 	<templateMode>true</templateMode>
 	<defaultFormatIndex>10</defaultFormatIndex>
-	<height>183</height>
-	<vgRows>183</vgRows>
+	<height>169</height>
+	<vgRows>169</vgRows>
 	<line width="1" gap="false">
 		<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
 	</line>
