@@ -66,6 +66,8 @@
 		<ChildObjects>
 			<Language>Русский</Language>
 			<Subsystem>ОМ_Оформлятор</Subsystem>
+			<CommonPicture>ОМ_Переменная</CommonPicture>
+			<CommonPicture>ОМ_ПроцедураФункция</CommonPicture>
 			<Role>ОМ_ОсновнаяРоль</Role>
 			<DataProcessor>ОМ_ОформляторМодулей</DataProcessor>
 			<DataProcessor>ОМ_Парсер_ПарсерВстроенногоЯзыка</DataProcessor>
@@ -74,6 +76,8 @@
 			<DataProcessor>ОМ_Компонент_РасстановкаОбластей</DataProcessor>
 			<DataProcessor>ОМ_Компонент_ГенерацияТекстовМодулей</DataProcessor>
 			<DataProcessor>ОМ_Компонент_УстановкаИнструкцийПрепроцессора</DataProcessor>
+			<DataProcessor>ОМ_Компонент_АнализМодуля</DataProcessor>
+			<DataProcessor>ОМ_Компонент_ДокументированиеМетодов</DataProcessor>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>

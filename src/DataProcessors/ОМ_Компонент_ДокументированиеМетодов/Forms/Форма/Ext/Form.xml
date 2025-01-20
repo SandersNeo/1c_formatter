@@ -1,0 +1,801 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаГенерироватьОписание" id="67">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ГенерироватьОписание</CommandName>
+				<ExtendedTooltip name="ФормаГенерироватьОписаниеРасширеннаяПодсказка" id="68"/>
+			</Button>
+			<Button name="ФормаПринятьИЗакрыть" id="69">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПринятьИЗакрыть</CommandName>
+				<ExtendedTooltip name="ФормаПринятьИЗакрытьРасширеннаяПодсказка" id="70"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<RadioButtonField name="Анализировать" id="71">
+			<DataPath>Анализировать</DataPath>
+			<RadioButtonType>Tumbler</RadioButtonType>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Только выбранный метод</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">ТолькоМетод</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Весь модуль</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">ВесьМодуль</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="АнализироватьКонтекстноеМеню" id="72"/>
+			<ExtendedTooltip name="АнализироватьРасширеннаяПодсказка" id="73"/>
+		</RadioButtonField>
+		<Pages name="ГруппаСтраницы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<Page name="Метод" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Методы и описания</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Метод</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="МетодРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаМетодыОписания" id="86">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа методы описания</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа методы описания</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаМетодыОписанияРасширеннаяПодсказка" id="87"/>
+							<ChildItems>
+								<Pages name="СтраницыОдинНесколько" id="80">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страницы один несколько</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страницы один несколько</v8:content>
+										</v8:item>
+									</ToolTip>
+									<PagesRepresentation>None</PagesRepresentation>
+									<ExtendedTooltip name="СтраницыОдинНесколькоРасширеннаяПодсказка" id="81"/>
+									<ChildItems>
+										<Page name="СтраницаОдинМетод" id="82">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница один метод</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница один метод</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="СтраницаОдинМетодРасширеннаяПодсказка" id="83"/>
+											<ChildItems>
+												<InputField name="МетодыКДокументированиюИмя1" id="132">
+													<DataPath>МетодыКДокументированию[0].Имя</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="МетодыКДокументированиюИмя1КонтекстноеМеню" id="133"/>
+													<ExtendedTooltip name="МетодыКДокументированиюИмя1РасширеннаяПодсказка" id="134"/>
+												</InputField>
+												<InputField name="МетодыКДокументированиюТекстМетода1" id="135">
+													<DataPath>МетодыКДокументированию[0].ТекстМетода</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MultiLine>true</MultiLine>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="МетодыКДокументированиюТекстМетода1КонтекстноеМеню" id="136"/>
+													<ExtendedTooltip name="МетодыКДокументированиюТекстМетода1РасширеннаяПодсказка" id="137"/>
+												</InputField>
+											</ChildItems>
+										</Page>
+										<Page name="СтраницаНесколькоМетодов" id="84">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница несколько методов</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница несколько методов</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="СтраницаНесколькоМетодовРасширеннаяПодсказка" id="85"/>
+											<ChildItems>
+												<Table name="МетодыКДокументированию" id="88">
+													<Representation>List</Representation>
+													<ReadOnly>true</ReadOnly>
+													<AutoInsertNewRow>true</AutoInsertNewRow>
+													<EnableStartDrag>true</EnableStartDrag>
+													<EnableDrag>true</EnableDrag>
+													<DataPath>МетодыКДокументированию</DataPath>
+													<RowPictureDataPath>МетодыКДокументированию.НомерКартинки</RowPictureDataPath>
+													<RowsPicture>
+														<xr:Ref>CommonPicture.ОМ_ПроцедураФункция</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</RowsPicture>
+													<RowFilter xsi:nil="true"/>
+													<ContextMenu name="МетодыКДокументированиюКонтекстноеМеню" id="89"/>
+													<AutoCommandBar name="МетодыКДокументированиюКоманднаяПанель" id="90"/>
+													<ExtendedTooltip name="МетодыКДокументированиюРасширеннаяПодсказка" id="91"/>
+													<SearchStringAddition name="МетодыКДокументированиюСтрокаПоиска" id="92">
+														<AdditionSource>
+															<Item>МетодыКДокументированию</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="МетодыКДокументированиюСтрокаПоискаКонтекстноеМеню" id="93"/>
+														<ExtendedTooltip name="МетодыКДокументированиюСтрокаПоискаРасширеннаяПодсказка" id="94"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="МетодыКДокументированиюСостояниеПросмотра" id="95">
+														<AdditionSource>
+															<Item>МетодыКДокументированию</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="МетодыКДокументированиюСостояниеПросмотраКонтекстноеМеню" id="96"/>
+														<ExtendedTooltip name="МетодыКДокументированиюСостояниеПросмотраРасширеннаяПодсказка" id="97"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="МетодыКДокументированиюУправлениеПоиском" id="98">
+														<AdditionSource>
+															<Item>МетодыКДокументированию</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="МетодыКДокументированиюУправлениеПоискомКонтекстноеМеню" id="99"/>
+														<ExtendedTooltip name="МетодыКДокументированиюУправлениеПоискомРасширеннаяПодсказка" id="100"/>
+													</SearchControlAddition>
+													<ChildItems>
+														<CheckBoxField name="МетодыКДокументированиюПометка" id="107">
+															<DataPath>МетодыКДокументированию.Пометка</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content> </v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="МетодыКДокументированиюПометкаКонтекстноеМеню" id="108"/>
+															<ExtendedTooltip name="МетодыКДокументированиюПометкаРасширеннаяПодсказка" id="109"/>
+														</CheckBoxField>
+														<InputField name="МетодыКДокументированиюИмя" id="101">
+															<DataPath>МетодыКДокументированию.Имя</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+															<ContextMenu name="МетодыКДокументированиюИмяКонтекстноеМеню" id="102"/>
+															<ExtendedTooltip name="МетодыКДокументированиюИмяРасширеннаяПодсказка" id="103"/>
+														</InputField>
+													</ChildItems>
+												</Table>
+												<InputField name="МетодыКДокументированиюТекстМетода" id="104">
+													<DataPath>Items.МетодыКДокументированию.CurrentData.ТекстМетода</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MultiLine>true</MultiLine>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="МетодыКДокументированиюТекстМетодаКонтекстноеМеню" id="105"/>
+													<ExtendedTooltip name="МетодыКДокументированиюТекстМетодаРасширеннаяПодсказка" id="106"/>
+												</InputField>
+											</ChildItems>
+										</Page>
+									</ChildItems>
+								</Pages>
+								<UsualGroup name="ГруппаОписание" id="141">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа описание</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа описание</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОписаниеРасширеннаяПодсказка" id="142"/>
+									<ChildItems>
+										<InputField name="МетодыКДокументированиюКомментарий" id="143">
+											<DataPath>Items.МетодыКДокументированию.CurrentData.Комментарий</DataPath>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MultiLine>true</MultiLine>
+											<ExtendedEdit>true</ExtendedEdit>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="МетодыКДокументированиюКомментарийКонтекстноеМеню" id="144"/>
+											<ExtendedTooltip name="МетодыКДокументированиюКомментарийРасширеннаяПодсказка" id="145"/>
+										</InputField>
+										<Table name="МетодыКДокументированиюПараметрыМетода" id="110">
+											<Representation>List</Representation>
+											<TitleLocation>Top</TitleLocation>
+											<ReadOnly>true</ReadOnly>
+											<ChangeRowSet>false</ChangeRowSet>
+											<ChangeRowOrder>false</ChangeRowOrder>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<DataPath>Items.МетодыКДокументированию.CurrentData.ПараметрыМетода</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Параметры</v8:content>
+												</v8:item>
+											</Title>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="МетодыКДокументированиюПараметрыМетодаКонтекстноеМеню" id="111"/>
+											<AutoCommandBar name="МетодыКДокументированиюПараметрыМетодаКоманднаяПанель" id="112"/>
+											<ExtendedTooltip name="МетодыКДокументированиюПараметрыМетодаРасширеннаяПодсказка" id="113"/>
+											<SearchStringAddition name="МетодыКДокументированиюПараметрыМетодаСтрокаПоиска" id="114">
+												<AdditionSource>
+													<Item>МетодыКДокументированиюПараметрыМетода</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="МетодыКДокументированиюПараметрыМетодаСтрокаПоискаКонтекстноеМеню" id="115"/>
+												<ExtendedTooltip name="МетодыКДокументированиюПараметрыМетодаСтрокаПоискаРасширеннаяПодсказка" id="116"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="МетодыКДокументированиюПараметрыМетодаСостояниеПросмотра" id="117">
+												<AdditionSource>
+													<Item>МетодыКДокументированиюПараметрыМетода</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="МетодыКДокументированиюПараметрыМетодаСостояниеПросмотраКонтекстноеМеню" id="118"/>
+												<ExtendedTooltip name="МетодыКДокументированиюПараметрыМетодаСостояниеПросмотраРасширеннаяПодсказка" id="119"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="МетодыКДокументированиюПараметрыМетодаУправлениеПоиском" id="120">
+												<AdditionSource>
+													<Item>МетодыКДокументированиюПараметрыМетода</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="МетодыКДокументированиюПараметрыМетодаУправлениеПоискомКонтекстноеМеню" id="121"/>
+												<ExtendedTooltip name="МетодыКДокументированиюПараметрыМетодаУправлениеПоискомРасширеннаяПодсказка" id="122"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<InputField name="МетодыКДокументированиюПараметрыМетодаИмя" id="123">
+													<DataPath>Items.МетодыКДокументированию.CurrentData.ПараметрыМетода.Имя</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="МетодыКДокументированиюПараметрыМетодаИмяКонтекстноеМеню" id="124"/>
+													<ExtendedTooltip name="МетодыКДокументированиюПараметрыМетодаИмяРасширеннаяПодсказка" id="125"/>
+												</InputField>
+												<InputField name="МетодыКДокументированиюПараметрыМетодаТип" id="126">
+													<DataPath>Items.МетодыКДокументированию.CurrentData.ПараметрыМетода.Тип</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="МетодыКДокументированиюПараметрыМетодаТипКонтекстноеМеню" id="127"/>
+													<ExtendedTooltip name="МетодыКДокументированиюПараметрыМетодаТипРасширеннаяПодсказка" id="128"/>
+												</InputField>
+												<InputField name="МетодыКДокументированиюПараметрыМетодаОписание" id="129">
+													<DataPath>Items.МетодыКДокументированию.CurrentData.ПараметрыМетода.Описание</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="МетодыКДокументированиюПараметрыМетодаОписаниеКонтекстноеМеню" id="130"/>
+													<ExtendedTooltip name="МетодыКДокументированиюПараметрыМетодаОписаниеРасширеннаяПодсказка" id="131"/>
+												</InputField>
+											</ChildItems>
+										</Table>
+										<InputField name="МетодыКДокументированиюКомментарийВозвращаемоеЗначение" id="138">
+											<DataPath>Items.МетодыКДокументированию.CurrentData.КомментарийВозвращаемоеЗначение</DataPath>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MultiLine>true</MultiLine>
+											<ExtendedEdit>true</ExtendedEdit>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="МетодыКДокументированиюКомментарийВозвращаемоеЗначениеКонтекстноеМеню" id="139"/>
+											<ExtendedTooltip name="МетодыКДокументированиюКомментарийВозвращаемоеЗначениеРасширеннаяПодсказка" id="140"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="Настройки" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="НастройкиРасширеннаяПодсказка" id="8"/>
+					<ChildItems>
+						<InputField name="КлючAPI" id="61">
+							<DataPath>КлючAPI</DataPath>
+							<TitleLocation>Top</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Если не указан - используется бесплатный сервис (есть ограничения, работоспособность не гарантируется)</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="КлючAPIКонтекстноеМеню" id="62"/>
+							<ExtendedTooltip name="КлючAPIРасширеннаяПодсказка" id="63"/>
+						</InputField>
+						<InputField name="БазовыйАдрес" id="64">
+							<DataPath>БазовыйАдрес</DataPath>
+							<TitleLocation>Top</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Укажите эндпоинт для текстовых дополнений провайдера ИИ, совместимого с OpenAI API (OpenAI, OpenRouter). Если не указан, используется OpenRouter (`https://api.openrouter.ai/v1/chat/completions`).</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="БазовыйАдресКонтекстноеМеню" id="65"/>
+							<ExtendedTooltip name="БазовыйАдресРасширеннаяПодсказка" id="66"/>
+						</InputField>
+						<InputField name="Модель" id="77">
+							<DataPath>Модель</DataPath>
+							<TitleLocation>Top</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Имя модели так, как она должна указываться в запросах к провайдеру ИИ (например, "openai/chatgpt-4o-latest")</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="МодельКонтекстноеМеню" id="78"/>
+							<ExtendedTooltip name="МодельРасширеннаяПодсказка" id="79"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ОМ_Компонент_ДокументированиеМетодов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПараметрыПодпрограммы" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры подпрограммы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Имя" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Тип" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗначениеПоУмолчанию" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение по умолчанию</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПоЗначению" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>По значению</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Описание" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="КлючAPI" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ключ API</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>КлючAPI</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="БазовыйАдрес" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Базовый адрес</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>БазовыйАдрес</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Анализировать" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Анализировать</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Модель" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Модель</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>Модель</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="МетодыКДокументированию" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Методы к документированию</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Имя" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТекстМетода" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текст метода</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Пометка" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПараметрыМетода" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметры метода</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:ValueTable</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Комментарий" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КомментарийВозвращаемоеЗначение" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий возвращаемое значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЭтоФункция" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Это функция</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НомерКартинки" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер картинки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТекстМодуля" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текст модуля</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<AdditionalColumns table="МетодыКДокументированию.ПараметрыМетода">
+					<Column name="Имя" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Имя</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="Тип" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Тип</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="Описание" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Описание</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ГенерироватьОписание" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Генерировать описание</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Генерировать описание</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ГенерироватьОписание</Action>
+		</Command>
+		<Command name="ПринятьИЗакрыть" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Принять и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Принять и закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+		</Command>
+	</Commands>
+</Form>
