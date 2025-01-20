@@ -69,6 +69,7 @@
 			<CommonPicture>ОМ_Переменная</CommonPicture>
 			<CommonPicture>ОМ_ПроцедураФункция</CommonPicture>
 			<Role>ОМ_ОсновнаяРоль</Role>
+			<CommonModule>КлиентИИ</CommonModule>
 			<DataProcessor>ОМ_ОформляторМодулей</DataProcessor>
 			<DataProcessor>ОМ_Парсер_ПарсерВстроенногоЯзыка</DataProcessor>
 			<DataProcessor>ОМ_Парсер_ГлобальноеОкружение</DataProcessor>

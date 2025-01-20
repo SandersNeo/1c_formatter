@@ -4,14 +4,9 @@
 	<SaveDataInSettings>UseList</SaveDataInSettings>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
-			<Button name="ФормаГенерироватьОписание" id="67">
-				<Type>CommandBarButton</Type>
-				<DefaultButton>true</DefaultButton>
-				<CommandName>Form.Command.ГенерироватьОписание</CommandName>
-				<ExtendedTooltip name="ФормаГенерироватьОписаниеРасширеннаяПодсказка" id="68"/>
-			</Button>
 			<Button name="ФормаПринятьИЗакрыть" id="69">
 				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
 				<CommandName>Form.Command.ПринятьИЗакрыть</CommandName>
 				<ExtendedTooltip name="ФормаПринятьИЗакрытьРасширеннаяПодсказка" id="70"/>
 			</Button>
@@ -22,40 +17,59 @@
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<RadioButtonField name="Анализировать" id="71">
-			<DataPath>Анализировать</DataPath>
-			<RadioButtonType>Tumbler</RadioButtonType>
-			<ChoiceList>
-				<xr:Item>
-					<xr:Presentation/>
-					<xr:CheckState>0</xr:CheckState>
-					<xr:Value xsi:type="FormChoiceListDesTimeValue">
-						<Presentation>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Только метод</v8:content>
-							</v8:item>
-						</Presentation>
-						<Value xsi:type="xs:string">ТолькоМетод</Value>
-					</xr:Value>
-				</xr:Item>
-				<xr:Item>
-					<xr:Presentation/>
-					<xr:CheckState>0</xr:CheckState>
-					<xr:Value xsi:type="FormChoiceListDesTimeValue">
-						<Presentation>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Весь модуль</v8:content>
-							</v8:item>
-						</Presentation>
-						<Value xsi:type="xs:string">ВесьМодуль</Value>
-					</xr:Value>
-				</xr:Item>
-			</ChoiceList>
-			<ContextMenu name="АнализироватьКонтекстноеМеню" id="72"/>
-			<ExtendedTooltip name="АнализироватьРасширеннаяПодсказка" id="73"/>
-		</RadioButtonField>
+		<UsualGroup name="Группа1" id="146">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="147"/>
+			<ChildItems>
+				<RadioButtonField name="Анализировать" id="71">
+					<DataPath>Анализировать</DataPath>
+					<RadioButtonType>Tumbler</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Только метод</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">ТолькоМетод</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Весь модуль</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">ВесьМодуль</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="АнализироватьКонтекстноеМеню" id="72"/>
+					<ExtendedTooltip name="АнализироватьРасширеннаяПодсказка" id="73"/>
+				</RadioButtonField>
+				<Button name="ФормаГенерироватьОписание" id="67">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.Command.ГенерироватьОписание</CommandName>
+					<BackColor>web:Azure</BackColor>
+					<Picture>
+						<xr:Ref>StdPicture.Refresh</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ФормаГенерироватьОписаниеРасширеннаяПодсказка" id="68"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
 		<Pages name="ГруппаСтраницы" id="1">
 			<Title>
 				<v8:item>
@@ -172,7 +186,6 @@
 											<ChildItems>
 												<Table name="МетодыКДокументированию" id="88">
 													<Representation>List</Representation>
-													<ReadOnly>true</ReadOnly>
 													<ChangeRowSet>false</ChangeRowSet>
 													<ChangeRowOrder>false</ChangeRowOrder>
 													<AutoInsertNewRow>true</AutoInsertNewRow>
@@ -233,6 +246,7 @@
 														</CheckBoxField>
 														<InputField name="МетодыКДокументированиюИмя" id="101">
 															<DataPath>МетодыКДокументированию.Имя</DataPath>
+															<ReadOnly>true</ReadOnly>
 															<EditMode>EnterOnInput</EditMode>
 															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 															<ContextMenu name="МетодыКДокументированиюИмяКонтекстноеМеню" id="102"/>
@@ -673,6 +687,32 @@
 							</v8:StringQualifiers>
 						</Type>
 					</Column>
+					<Column name="ЗначениеПоУмолчанию" id="4">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Значение по умолчанию</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="ПоЗначению" id="5">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>По значению</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
 				</AdditionalColumns>
 			</Columns>
 		</Attribute>
@@ -736,6 +776,7 @@
 					<v8:content>Принять и закрыть</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Action>ПринятьИЗакрыть</Action>
 		</Command>
 	</Commands>
 </Form>
