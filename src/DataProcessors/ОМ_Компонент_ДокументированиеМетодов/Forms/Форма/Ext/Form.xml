@@ -33,7 +33,7 @@
 						<Presentation>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
-								<v8:content>Только выбранный метод</v8:content>
+								<v8:content>Только метод</v8:content>
 							</v8:item>
 						</Presentation>
 						<Value xsi:type="xs:string">ТолькоМетод</Value>
