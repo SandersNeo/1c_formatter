@@ -126,77 +126,83 @@
 &НаКлиенте
 Функция СформироватьПромптДляДокументированияАнализируяТолькоМетод(КодМетода)
 	ТекстПромпта = 
-	    "Analyze the provided 1C method code and generate documentation in JSON format.
-	    |
-	    |- Extract the method's purpose and provide a clear description.
-	    |- Identify and list each parameter by name, specifying its type and description.
-	    |- Determine the return value and describe it, including its type.
-	    |
-	    |# Steps
-	    |
-	    |1. **Extract Description**: Understand the functionality and purpose of the method from the code.
-	    |2. **Identify Parameters**: Identify the parameters used in the method, detailing their name, type, and purpose.
-	    |3. **Determine Return Value**: Examine the method to understand what it returns, noting the type and a brief description.
-	    |
-	    |# Output Format
-	    |
-	    |Provide a JSON object in the following format:
-	    |```json
-	    |{
-	    |  ""description"": ""<описание назначения метода>"",
-	    |  ""parameters"": [
-	    |    {
-	    |      ""name"": ""<имя параметра 1>"",
-	    |      ""type"": ""<тип параметра 1>"",
-	    |      ""descr"": ""<описание параметра 1>""
-	    |    },
-	    |    {
-	    |      ""name"": ""<имя параметра 2>"",
-	    |      ""type"": ""<тип параметра 2>"",
-	    |      ""descr"": ""<описание параметра 2>""
-	    |    }
-	    |  ],
-	    |  ""return_descr"": ""<описание возвращаемого значения в формате Тип - Описание, максимум 100 символов>""
-	    |}
-	    |```
-	    |
-	    |# Examples
-	    |
-	    |**Example Input:**
-	    |```1C
-	    |&НаСервере
-	    |Функция ПолучитьИмя(ИдСотрудника)
-	    |Возврат Справочники.Сотрудники.НайтиПоКоду(ИдСотрудника).Имя;
-	    |КонецФункции
-	    |```
-	    |
-	    |**Example Output:**
-	    |```json
-	    |{
-	    |  ""description"": ""Возвращает имя сотрудника по его идентификатору"",
-	    |  ""parameters"": [
-	    |    {
-	    |      ""name"": ""ИдСотрудника"",
-	    |      ""type"": ""Строка"",
-	    |      ""descr"": ""Идентификатор сотрудника""
-	    |    }
-	    |  ],
-	    |  ""return_descr"": ""Строка - Имя сотрудника""
-	    |}
-	    |```
-	    |
-	    |# Notes
-	    |
-	    |- Ensure accuracy in describing the method's function, parameters, and return values.
-	    |- Handle any edge cases such as optional parameters or lack of return values gracefully.
-	    |- Descriptions are in Russian.
-	    |
-	    |# Code to Analyze:
-	    |```1C
-	    |" + КодМетода + "
-	    |```";
-	    
-	    Возврат ТекстПромпта;
+	"Analyze the provided 1C method code and generate documentation in JSON format.
+	|
+	|- Extract the method's purpose and provide a clear description.
+	|- Identify and list each parameter by name, specifying its type and description.
+	|- Determine the return value and describe it, including its type.
+	|
+	|# Steps
+	|
+	|1. **Extract Description**: Understand the functionality and purpose of the method from the code.
+	|2. **Identify Parameters**: Identify the parameters used in the method, detailing their name, type, and purpose.
+	|3. **Determine Return Value**: Examine the method to understand what it returns, noting the type and a brief description.
+	|
+	|# Output Format
+	|
+	|Provide a JSON object in the following format:
+	|```json
+	|{
+	|  ""description"": ""<описание назначения метода>"",
+	|  ""parameters"": [
+	|    {
+	|      ""name"": ""<имя параметра 1>"",
+	|      ""type"": ""<тип параметра 1>"",
+	|      ""descr"": ""<описание параметра 1>""
+	|    },
+	|    {
+	|      ""name"": ""<имя параметра 2>"",
+	|      ""type"": ""<тип параметра 2>"",
+	|      ""descr"": ""<описание параметра 2>""
+	|    }
+	|  ],
+	|  ""return_descr"": ""<описание возвращаемого значения в формате Тип - Описание, максимум 100 символов>""
+	|}
+	|```
+	|
+	|# Examples
+	|
+	|**Example Input:**
+	|```1C
+	|&НаСервере
+	|Функция ПолучитьИмя(ИдСотрудника)
+	|Возврат Справочники.Сотрудники.НайтиПоКоду(ИдСотрудника).Имя;
+	|КонецФункции
+	|```
+	|
+	|**Example Output:**
+	|```json
+	|{
+	|  ""description"": ""Возвращает имя сотрудника по его идентификатору"",
+	|  ""parameters"": [
+	|    {
+	|      ""name"": ""ИдСотрудника"",
+	|      ""type"": ""Строка"",
+	|      ""descr"": ""Идентификатор сотрудника""
+	|    }
+	|  ],
+	|  ""return_descr"": ""Строка - Имя сотрудника""
+	|}
+	|```
+	|
+	|# Notes
+	|
+	|- Ensure accuracy in describing the method's function, parameters, and return values.
+	|- Handle any edge cases such as optional parameters or lack of return values gracefully.
+	|- Descriptions are in Russian.
+	|
+	|# Context
+	|
+	|<knowladge>
+	|" + ДопИнфоКонтекст + "
+	|</knowladge>
+	|
+	|# Code to Analyze:
+	|```1C
+	|" + КодМетода + "
+	|```";
+
+	Возврат ТекстПромпта;
 КонецФункции
 
 &НаКлиенте
@@ -219,23 +225,23 @@
 	|
 	|Provide a JSON object in the following format:
 	|
-	    |```json
-	    |{
-	    |  ""description"": ""<описание назначения метода>"",
-	    |  ""parameters"": [
-	    |    {
-	    |      ""name"": ""<имя параметра 1>"",
-	    |      ""type"": ""<тип параметра 1>"",
-	    |      ""descr"": ""<описание параметра 1>""
-	    |    },
-	    |    {
-	    |      ""name"": ""<имя параметра 2>"",
-	    |      ""type"": ""<тип параметра 2>"",
-	    |      ""descr"": ""<описание параметра 2>""
-	    |    }
-	    |  ],
-	    |  ""return_descr"": ""<описание возвращаемого значения в формате Тип - Описание, максимум 100 символов>""
-	    |}
+	|```json
+	|{
+	|  ""description"": ""<описание назначения метода>"",
+	|  ""parameters"": [
+	|    {
+	|      ""name"": ""<имя параметра 1>"",
+	|      ""type"": ""<тип параметра 1>"",
+	|      ""descr"": ""<описание параметра 1>""
+	|    },
+	|    {
+	|      ""name"": ""<имя параметра 2>"",
+	|      ""type"": ""<тип параметра 2>"",
+	|      ""descr"": ""<описание параметра 2>""
+	|    }
+	|  ],
+	|  ""return_descr"": ""<описание возвращаемого значения в формате Тип - Описание, максимум 100 символов>""
+	|}
 	|
 	|# Examples
 	|
@@ -273,15 +279,21 @@
 	|- Ensure accuracy in describing the method's function, parameters, and return values.
 	|- Handle any edge cases such as optional parameters or lack of return values gracefully.
 	|- Descriptions are in Russian.
-	    |
-	    |# Code to Analyze:
-	    |```1C
-	    |" + ТекстМодуля + "
-	    |```
+	|
+    |# Context
+    |
+    |<knowladge>
+    |" + ДопИнфоКонтекст + "
+    |</knowladge>
+    |
+	|# Code to Analyze:
+	|```1C
+	|" + ТекстМодуля + "
+	|```
 	|
 	|**Method Name:** " + ИмяМетода;
 	    
-	    Возврат ТекстПромпта;
+    Возврат ТекстПромпта;
 КонецФункции
 
 &НаСервере
