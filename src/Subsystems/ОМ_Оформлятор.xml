@@ -19,6 +19,8 @@
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ОМ_ОформляторМодулей</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ОМ_Переменная</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ОМ_ПроцедураФункция</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.КлиентИИ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ОМ_ОсновнаяРоль</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects>

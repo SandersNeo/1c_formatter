@@ -2061,21 +2061,6 @@
 		</Attribute>
 	</Attributes>
 	<Commands>
-		<Command name="Разобрать" id="1">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Разобрать</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Разобрать</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>Разобрать</Action>
-		</Command>
 		<Command name="ДобавитьПодчиненныйВидЭлемента" id="2">
 			<Title>
 				<v8:item>
@@ -2090,21 +2075,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ДобавитьПодчиненныйВидЭлемента</Action>
-		</Command>
-		<Command name="Протестировать" id="6">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Протестировать</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Протестировать</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>Протестировать</Action>
 		</Command>
 		<Command name="ДобавитьМодульНовый" id="7">
 			<Title>
