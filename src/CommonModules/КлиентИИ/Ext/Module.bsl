@@ -1,4 +1,10 @@
-﻿#Область ПрограммныйИнтерфейс
+﻿// Репозиторий проекта: 
+// https://github.com/vladimir-kharin/1c_formatter
+// 
+// Харин Владимир (С) 2025. https://vharin.ru
+// Telegram - https://t.me/vladimir_kharin
+
+#Область ПрограммныйИнтерфейс
 
 // Преобразует строку в формате JSON в структуру.
 // 
