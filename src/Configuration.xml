@@ -61,7 +61,6 @@
 			<Copyright/>
 			<VendorInformationAddress/>
 			<ConfigurationInformationAddress/>
-			<InterfaceCompatibilityMode>Taxi</InterfaceCompatibilityMode>
 		</Properties>
 		<ChildObjects>
 			<Language>Русский</Language>
