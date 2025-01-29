@@ -140,6 +140,7 @@
 												<ChildItems>
 													<Button name="СтруктураМодуляДобавитьМодульНовый" id="308">
 														<Type>CommandBarButton</Type>
+														<Visible>false</Visible>
 														<CommandName>Form.Command.ДобавитьМодульНовый</CommandName>
 														<Title>
 															<v8:item>
