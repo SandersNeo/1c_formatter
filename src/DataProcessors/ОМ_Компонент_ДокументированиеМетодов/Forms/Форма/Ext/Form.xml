@@ -201,6 +201,18 @@
 													<ContextMenu name="МетодыКДокументированиюКонтекстноеМеню" id="89"/>
 													<AutoCommandBar name="МетодыКДокументированиюКоманднаяПанель" id="90">
 														<Autofill>false</Autofill>
+														<ChildItems>
+															<Button name="МетодыКДокументированиюУстановитьПометки" id="153">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.УстановитьПометки</CommandName>
+																<ExtendedTooltip name="МетодыКДокументированиюУстановитьПометкиРасширеннаяПодсказка" id="154"/>
+															</Button>
+															<Button name="МетодыКДокументированиюСнятьПометки" id="155">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.СнятьПометки</CommandName>
+																<ExtendedTooltip name="МетодыКДокументированиюСнятьПометкиРасширеннаяПодсказка" id="156"/>
+															</Button>
+														</ChildItems>
 													</AutoCommandBar>
 													<ExtendedTooltip name="МетодыКДокументированиюРасширеннаяПодсказка" id="91"/>
 													<SearchStringAddition name="МетодыКДокументированиюСтрокаПоиска" id="92">
@@ -826,6 +838,44 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПринятьИЗакрыть</Action>
+		</Command>
+		<Command name="УстановитьПометки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить пометки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить пометки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьПометки</Action>
+		</Command>
+		<Command name="СнятьПометки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять пометки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять пометки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьПометки</Action>
 		</Command>
 	</Commands>
 </Form>
