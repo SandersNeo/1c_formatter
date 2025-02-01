@@ -444,6 +444,9 @@
 																					<CheckBoxType>Auto</CheckBoxType>
 																					<ContextMenu name="ЭкспортКонтекстноеМеню" id="58"/>
 																					<ExtendedTooltip name="ЭкспортРасширеннаяПодсказка" id="59"/>
+																					<Events>
+																						<Event name="OnChange">ПолеМетодаПриИзменении</Event>
+																					</Events>
 																				</CheckBoxField>
 																				<CheckBoxField name="Асинх" id="301">
 																					<DataPath>_Асинх</DataPath>
@@ -452,6 +455,9 @@
 																					<CheckBoxType>Auto</CheckBoxType>
 																					<ContextMenu name="АсинхКонтекстноеМеню" id="302"/>
 																					<ExtendedTooltip name="АсинхРасширеннаяПодсказка" id="303"/>
+																					<Events>
+																						<Event name="OnChange">ПолеМетодаПриИзменении</Event>
+																					</Events>
 																				</CheckBoxField>
 																				<InputField name="Контекст" id="60">
 																					<DataPath>Контекст</DataPath>
@@ -493,6 +499,9 @@
 																					</ChoiceList>
 																					<ContextMenu name="КонтекстКонтекстноеМеню" id="61"/>
 																					<ExtendedTooltip name="КонтекстРасширеннаяПодсказка" id="62"/>
+																					<Events>
+																						<Event name="OnChange">ПолеМетодаПриИзменении</Event>
+																					</Events>
 																				</InputField>
 																			</ChildItems>
 																		</UsualGroup>
@@ -554,6 +563,9 @@
 																					</ChoiceList>
 																					<ContextMenu name="АннотацияКонтекстноеМеню" id="206"/>
 																					<ExtendedTooltip name="АннотацияРасширеннаяПодсказка" id="207"/>
+																					<Events>
+																						<Event name="OnChange">ПолеМетодаПриИзменении</Event>
+																					</Events>
 																				</InputField>
 																				<InputField name="ИмяРасширяемойПодпрограммы" id="208">
 																					<DataPath>ИмяРасширяемогоМетода</DataPath>
@@ -566,6 +578,9 @@
 																					</Title>
 																					<ContextMenu name="ИмяРасширяемойПодпрограммыКонтекстноеМеню" id="209"/>
 																					<ExtendedTooltip name="ИмяРасширяемойПодпрограммыРасширеннаяПодсказка" id="210"/>
+																					<Events>
+																						<Event name="OnChange">ПолеМетодаПриИзменении</Event>
+																					</Events>
 																				</InputField>
 																			</ChildItems>
 																		</UsualGroup>
@@ -630,6 +645,9 @@
 																		<ContextMenu name="ПараметрыПодпрограммыУправлениеПоискомКонтекстноеМеню" id="112"/>
 																		<ExtendedTooltip name="ПараметрыПодпрограммыУправлениеПоискомРасширеннаяПодсказка" id="113"/>
 																	</SearchControlAddition>
+																	<Events>
+																		<Event name="OnChange">ПолеМетодаПриИзменении</Event>
+																	</Events>
 																	<ChildItems>
 																		<InputField name="ПараметрыПодпрограммыИмя" id="114">
 																			<DataPath>ПараметрыПодпрограммы.Имя</DataPath>
@@ -653,6 +671,12 @@
 																		<InputField name="ПараметрыПодпрограммыЗначениеПоУмолчанию" id="120">
 																			<DataPath>ПараметрыПодпрограммы.ЗначениеПоУмолчанию</DataPath>
 																			<ReadOnly>true</ReadOnly>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>По умолчанию</v8:content>
+																				</v8:item>
+																			</Title>
 																			<EditMode>EnterOnInput</EditMode>
 																			<ContextMenu name="ПараметрыПодпрограммыЗначениеПоУмолчаниюКонтекстноеМеню" id="121"/>
 																			<ExtendedTooltip name="ПараметрыПодпрограммыЗначениеПоУмолчаниюРасширеннаяПодсказка" id="122"/>
@@ -660,6 +684,12 @@
 																		<CheckBoxField name="ПараметрыПодпрограммыПоЗначению" id="123">
 																			<DataPath>ПараметрыПодпрограммы.ПоЗначению</DataPath>
 																			<ReadOnly>true</ReadOnly>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Знач</v8:content>
+																				</v8:item>
+																			</Title>
 																			<EditMode>EnterOnInput</EditMode>
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="ПараметрыПодпрограммыПоЗначениюКонтекстноеМеню" id="124"/>
@@ -795,6 +825,9 @@
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="КлиентКонтекстноеМеню" id="216"/>
 																			<ExtendedTooltip name="КлиентРасширеннаяПодсказка" id="217"/>
+																			<Events>
+																				<Event name="OnChange">ПолеМетодаПриИзменении</Event>
+																			</Events>
 																		</CheckBoxField>
 																		<CheckBoxField name="Сервер" id="218">
 																			<DataPath>Сервер</DataPath>
@@ -802,6 +835,9 @@
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="СерверКонтекстноеМеню" id="219"/>
 																			<ExtendedTooltip name="СерверРасширеннаяПодсказка" id="220"/>
+																			<Events>
+																				<Event name="OnChange">ПолеМетодаПриИзменении</Event>
+																			</Events>
 																		</CheckBoxField>
 																		<CheckBoxField name="ТонкийКлиент" id="221">
 																			<DataPath>ТонкийКлиент</DataPath>
@@ -809,6 +845,9 @@
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="ТонкийКлиентКонтекстноеМеню" id="222"/>
 																			<ExtendedTooltip name="ТонкийКлиентРасширеннаяПодсказка" id="223"/>
+																			<Events>
+																				<Event name="OnChange">ПолеМетодаПриИзменении</Event>
+																			</Events>
 																		</CheckBoxField>
 																		<CheckBoxField name="ВебКлиент" id="224">
 																			<DataPath>ВебКлиент</DataPath>
@@ -816,6 +855,9 @@
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="ВебКлиентКонтекстноеМеню" id="225"/>
 																			<ExtendedTooltip name="ВебКлиентРасширеннаяПодсказка" id="226"/>
+																			<Events>
+																				<Event name="OnChange">ПолеМетодаПриИзменении</Event>
+																			</Events>
 																		</CheckBoxField>
 																		<CheckBoxField name="ТолстыйКлиентОбычноеПриложение" id="227">
 																			<DataPath>ТолстыйКлиентОбычноеПриложение</DataPath>
@@ -823,6 +865,9 @@
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="ТолстыйКлиентОбычноеПриложениеКонтекстноеМеню" id="228"/>
 																			<ExtendedTooltip name="ТолстыйКлиентОбычноеПриложениеРасширеннаяПодсказка" id="229"/>
+																			<Events>
+																				<Event name="OnChange">ПолеМетодаПриИзменении</Event>
+																			</Events>
 																		</CheckBoxField>
 																		<CheckBoxField name="ТолстыйКлиентУправляемоеПриложение" id="230">
 																			<DataPath>ТолстыйКлиентУправляемоеПриложение</DataPath>
@@ -830,6 +875,9 @@
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="ТолстыйКлиентУправляемоеПриложениеКонтекстноеМеню" id="231"/>
 																			<ExtendedTooltip name="ТолстыйКлиентУправляемоеПриложениеРасширеннаяПодсказка" id="232"/>
+																			<Events>
+																				<Event name="OnChange">ПолеМетодаПриИзменении</Event>
+																			</Events>
 																		</CheckBoxField>
 																		<CheckBoxField name="ВнешнееСоединение" id="233">
 																			<DataPath>ВнешнееСоединение</DataPath>
@@ -837,6 +885,9 @@
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="ВнешнееСоединениеКонтекстноеМеню" id="234"/>
 																			<ExtendedTooltip name="ВнешнееСоединениеРасширеннаяПодсказка" id="235"/>
+																			<Events>
+																				<Event name="OnChange">ПолеМетодаПриИзменении</Event>
+																			</Events>
 																		</CheckBoxField>
 																		<CheckBoxField name="МобильныйКлиент" id="242">
 																			<DataPath>МобильныйКлиент</DataPath>
@@ -844,6 +895,9 @@
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="МобильныйКлиентКонтекстноеМеню" id="243"/>
 																			<ExtendedTooltip name="МобильныйКлиентРасширеннаяПодсказка" id="244"/>
+																			<Events>
+																				<Event name="OnChange">ПолеМетодаПриИзменении</Event>
+																			</Events>
 																		</CheckBoxField>
 																		<CheckBoxField name="МобильноеПриложениеКлиент" id="236">
 																			<DataPath>МобильноеПриложениеКлиент</DataPath>
@@ -851,6 +905,9 @@
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="МобильноеПриложениеКлиентКонтекстноеМеню" id="237"/>
 																			<ExtendedTooltip name="МобильноеПриложениеКлиентРасширеннаяПодсказка" id="238"/>
+																			<Events>
+																				<Event name="OnChange">ПолеМетодаПриИзменении</Event>
+																			</Events>
 																		</CheckBoxField>
 																		<CheckBoxField name="МобильноеПриложениеСервер" id="239">
 																			<DataPath>МобильноеПриложениеСервер</DataPath>
@@ -858,6 +915,9 @@
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="МобильноеПриложениеСерверКонтекстноеМеню" id="240"/>
 																			<ExtendedTooltip name="МобильноеПриложениеСерверРасширеннаяПодсказка" id="241"/>
+																			<Events>
+																				<Event name="OnChange">ПолеМетодаПриИзменении</Event>
+																			</Events>
 																		</CheckBoxField>
 																		<CheckBoxField name="МобильныйАвтономныйСервер" id="245">
 																			<DataPath>МобильныйАвтономныйСервер</DataPath>
@@ -865,6 +925,9 @@
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="МобильныйАвтономныйСерверКонтекстноеМеню" id="246"/>
 																			<ExtendedTooltip name="МобильныйАвтономныйСерверРасширеннаяПодсказка" id="247"/>
+																			<Events>
+																				<Event name="OnChange">ПолеМетодаПриИзменении</Event>
+																			</Events>
 																		</CheckBoxField>
 																	</ChildItems>
 																</UsualGroup>
@@ -2171,6 +2234,17 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="РазрешитьРедактирование" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разрешить редактирование</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ДобавитьПодчиненныйВидЭлемента" id="2">
@@ -2265,6 +2339,7 @@
 				<xr:Ref>CommonPicture.ОМ_РедактированиеРеквизитов</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
+			<Action>РазрешитьРедактирование</Action>
 		</Command>
 	</Commands>
 </Form>
