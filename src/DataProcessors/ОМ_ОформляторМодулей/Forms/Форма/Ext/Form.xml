@@ -365,17 +365,17 @@
 															</ToolTip>
 															<ExtendedTooltip name="ГруппаПараметрыПодпрограммыСтраницаОсновноеРасширеннаяПодсказка" id="178"/>
 															<ChildItems>
-																<UsualGroup name="ГруппаСингатураПодробно" id="397">
+																<UsualGroup name="ГруппаСигнатураПодробно" id="397">
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>Сингатура подробно</v8:content>
+																			<v8:content>Сигнатура подробно</v8:content>
 																		</v8:item>
 																	</Title>
 																	<ToolTip>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>Группа сингатура подробно</v8:content>
+																			<v8:content>Группа сигнатура подробно</v8:content>
 																		</v8:item>
 																	</ToolTip>
 																	<Group>Vertical</Group>
@@ -383,11 +383,11 @@
 																	<CollapsedRepresentationTitle>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>Сингатура подробно (развернуть)</v8:content>
+																			<v8:content>Сигнатура подробно (развернуть)</v8:content>
 																		</v8:item>
 																	</CollapsedRepresentationTitle>
 																	<Collapsed>true</Collapsed>
-																	<ExtendedTooltip name="ГруппаСингатураПодробноРасширеннаяПодсказка" id="398"/>
+																	<ExtendedTooltip name="ГруппаСигнатураПодробноРасширеннаяПодсказка" id="398"/>
 																	<ChildItems>
 																		<UsualGroup name="Группа3" id="47">
 																			<Group>Horizontal</Group>
