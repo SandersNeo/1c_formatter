@@ -369,7 +369,7 @@
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>Сигнатура подробно</v8:content>
+																			<v8:content>▾ Сигнатура подробно</v8:content>
 																		</v8:item>
 																	</Title>
 																	<ToolTip>
@@ -383,7 +383,7 @@
 																	<CollapsedRepresentationTitle>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>Сигнатура подробно (развернуть)</v8:content>
+																			<v8:content>▸ Сигнатура подробно</v8:content>
 																		</v8:item>
 																	</CollapsedRepresentationTitle>
 																	<Collapsed>true</Collapsed>
@@ -509,11 +509,11 @@
 																			<Title>
 																				<v8:item>
 																					<v8:lang>ru</v8:lang>
-																					<v8:content>Аннотация расширения</v8:content>
+																					<v8:content>В расширении</v8:content>
 																				</v8:item>
 																			</Title>
 																			<Group>AlwaysHorizontal</Group>
-																			<Behavior>Collapsible</Behavior>
+																			<Behavior>Usual</Behavior>
 																			<CollapsedRepresentationTitle>
 																				<v8:item>
 																					<v8:lang>ru</v8:lang>
@@ -521,6 +521,7 @@
 																				</v8:item>
 																			</CollapsedRepresentationTitle>
 																			<Collapsed>true</Collapsed>
+																			<Representation>None</Representation>
 																			<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="204"/>
 																			<ChildItems>
 																				<InputField name="Аннотация" id="205">
