@@ -123,6 +123,12 @@
 									</ContextMenu>
 									<AutoCommandBar name="СтруктураМодуляКоманднаяПанель" id="20">
 										<ChildItems>
+											<Button name="СтруктураМодуляРазрешитьРедактирование" id="399">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.РазрешитьРедактирование</CommandName>
+												<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="СтруктураМодуляРазрешитьРедактированиеРасширеннаяПодсказка" id="400"/>
+											</Button>
 											<Popup name="СтруктураМодуляДобавитьМодуль" id="306">
 												<Title>
 													<v8:item>
@@ -247,6 +253,7 @@
 									<ChildItems>
 										<InputField name="СтруктураМодуляОписание" id="31">
 											<DataPath>СтруктураМодуля.Описание</DataPath>
+											<ReadOnly>true</ReadOnly>
 											<EditMode>EnterOnInput</EditMode>
 											<AutoMaxWidth>false</AutoMaxWidth>
 											<AutoMaxHeight>false</AutoMaxHeight>
@@ -318,6 +325,14 @@
 											</ToolTip>
 											<ExtendedTooltip name="ПараметрыЭлементаПодпрограммаРасширеннаяПодсказка" id="46"/>
 											<ChildItems>
+												<HTMLDocumentField name="СигнатураТекстом" id="394">
+													<DataPath>СигнатураТекстом</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<Height>4</Height>
+													<ContextMenu name="СигнатураТекстомКонтекстноеМеню" id="395"/>
+													<ExtendedTooltip name="СигнатураТекстомРасширеннаяПодсказка" id="396"/>
+												</HTMLDocumentField>
 												<Pages name="ГруппаПараметрыПодпрограммыСтраницы" id="175">
 													<Title>
 														<v8:item>
@@ -350,171 +365,210 @@
 															</ToolTip>
 															<ExtendedTooltip name="ГруппаПараметрыПодпрограммыСтраницаОсновноеРасширеннаяПодсказка" id="178"/>
 															<ChildItems>
-																<UsualGroup name="Группа3" id="47">
-																	<Group>Horizontal</Group>
-																	<Representation>None</Representation>
-																	<ChildItemsWidth>LeftWidest</ChildItemsWidth>
-																	<ShowTitle>false</ShowTitle>
-																	<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="48"/>
-																	<ChildItems>
-																		<UsualGroup name="Группа2" id="173">
-																			<ShowTitle>false</ShowTitle>
-																			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="174"/>
-																			<ChildItems>
-																				<InputField name="ИмяПодпрограммы" id="49">
-																					<DataPath>Имя</DataPath>
-																					<AutoMaxWidth>false</AutoMaxWidth>
-																					<ContextMenu name="ИмяПодпрограммыКонтекстноеМеню" id="50"/>
-																					<ExtendedTooltip name="ИмяПодпрограммыРасширеннаяПодсказка" id="51"/>
-																					<Events>
-																						<Event name="OnChange">ИмяПриИзменении</Event>
-																					</Events>
-																				</InputField>
-																			</ChildItems>
-																		</UsualGroup>
-																	</ChildItems>
-																</UsualGroup>
-																<UsualGroup name="Группа4" id="52">
-																	<Group>Horizontal</Group>
-																	<Representation>None</Representation>
-																	<ShowTitle>false</ShowTitle>
-																	<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="53"/>
-																	<ChildItems>
-																		<CheckBoxField name="ЭтоФункция" id="54">
-																			<DataPath>ЭтоФункция</DataPath>
-																			<TitleLocation>Right</TitleLocation>
-																			<CheckBoxType>Auto</CheckBoxType>
-																			<ContextMenu name="ЭтоФункцияКонтекстноеМеню" id="55"/>
-																			<ExtendedTooltip name="ЭтоФункцияРасширеннаяПодсказка" id="56"/>
-																			<Events>
-																				<Event name="OnChange">ЭтоФункцияПриИзменении</Event>
-																			</Events>
-																		</CheckBoxField>
-																		<CheckBoxField name="Экспорт" id="57">
-																			<DataPath>Экспортная</DataPath>
-																			<TitleLocation>Right</TitleLocation>
-																			<CheckBoxType>Auto</CheckBoxType>
-																			<ContextMenu name="ЭкспортКонтекстноеМеню" id="58"/>
-																			<ExtendedTooltip name="ЭкспортРасширеннаяПодсказка" id="59"/>
-																		</CheckBoxField>
-																		<CheckBoxField name="Асинх" id="301">
-																			<DataPath>_Асинх</DataPath>
-																			<TitleLocation>Right</TitleLocation>
-																			<CheckBoxType>Auto</CheckBoxType>
-																			<ContextMenu name="АсинхКонтекстноеМеню" id="302"/>
-																			<ExtendedTooltip name="АсинхРасширеннаяПодсказка" id="303"/>
-																		</CheckBoxField>
-																		<InputField name="Контекст" id="60">
-																			<DataPath>Контекст</DataPath>
-																			<DropListButton>true</DropListButton>
-																			<ChoiceList>
-																				<xr:Item>
-																					<xr:Presentation/>
-																					<xr:CheckState>0</xr:CheckState>
-																					<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																						<Presentation/>
-																						<Value xsi:type="xs:string">НаКлиенте</Value>
-																					</xr:Value>
-																				</xr:Item>
-																				<xr:Item>
-																					<xr:Presentation/>
-																					<xr:CheckState>0</xr:CheckState>
-																					<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																						<Presentation/>
-																						<Value xsi:type="xs:string">НаСервере</Value>
-																					</xr:Value>
-																				</xr:Item>
-																				<xr:Item>
-																					<xr:Presentation/>
-																					<xr:CheckState>0</xr:CheckState>
-																					<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																						<Presentation/>
-																						<Value xsi:type="xs:string">НаСервереБезКонтекста</Value>
-																					</xr:Value>
-																				</xr:Item>
-																				<xr:Item>
-																					<xr:Presentation/>
-																					<xr:CheckState>0</xr:CheckState>
-																					<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																						<Presentation/>
-																						<Value xsi:type="xs:string">НаКлиентеНаСервереБезКонтекста</Value>
-																					</xr:Value>
-																				</xr:Item>
-																			</ChoiceList>
-																			<ContextMenu name="КонтекстКонтекстноеМеню" id="61"/>
-																			<ExtendedTooltip name="КонтекстРасширеннаяПодсказка" id="62"/>
-																		</InputField>
-																	</ChildItems>
-																</UsualGroup>
-																<UsualGroup name="Группа5" id="203">
+																<UsualGroup name="ГруппаСингатураПодробно" id="397">
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>Аннотация расширения</v8:content>
+																			<v8:content>Сингатура подробно</v8:content>
 																		</v8:item>
 																	</Title>
-																	<Group>AlwaysHorizontal</Group>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа сингатура подробно</v8:content>
+																		</v8:item>
+																	</ToolTip>
+																	<Group>Vertical</Group>
 																	<Behavior>Collapsible</Behavior>
 																	<CollapsedRepresentationTitle>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>Аннотация расширения (развернуть)</v8:content>
+																			<v8:content>Сингатура подробно (развернуть)</v8:content>
 																		</v8:item>
 																	</CollapsedRepresentationTitle>
 																	<Collapsed>true</Collapsed>
-																	<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="204"/>
+																	<ExtendedTooltip name="ГруппаСингатураПодробноРасширеннаяПодсказка" id="398"/>
 																	<ChildItems>
-																		<InputField name="Аннотация" id="205">
-																			<DataPath>Аннотация</DataPath>
-																			<DropListButton>true</DropListButton>
-																			<ChoiceList>
-																				<xr:Item>
-																					<xr:Presentation/>
-																					<xr:CheckState>0</xr:CheckState>
-																					<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																						<Presentation/>
-																						<Value xsi:type="xs:string">Перед</Value>
-																					</xr:Value>
-																				</xr:Item>
-																				<xr:Item>
-																					<xr:Presentation/>
-																					<xr:CheckState>0</xr:CheckState>
-																					<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																						<Presentation/>
-																						<Value xsi:type="xs:string">После</Value>
-																					</xr:Value>
-																				</xr:Item>
-																				<xr:Item>
-																					<xr:Presentation/>
-																					<xr:CheckState>0</xr:CheckState>
-																					<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																						<Presentation/>
-																						<Value xsi:type="xs:string">Вместо</Value>
-																					</xr:Value>
-																				</xr:Item>
-																				<xr:Item>
-																					<xr:Presentation/>
-																					<xr:CheckState>0</xr:CheckState>
-																					<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																						<Presentation/>
-																						<Value xsi:type="xs:string">ИзменениеИКонтроль</Value>
-																					</xr:Value>
-																				</xr:Item>
-																			</ChoiceList>
-																			<ContextMenu name="АннотацияКонтекстноеМеню" id="206"/>
-																			<ExtendedTooltip name="АннотацияРасширеннаяПодсказка" id="207"/>
-																		</InputField>
-																		<InputField name="ИмяРасширяемойПодпрограммы" id="208">
-																			<DataPath>ИмяРасширяемогоМетода</DataPath>
+																		<UsualGroup name="Группа3" id="47">
+																			<Group>Horizontal</Group>
+																			<Representation>None</Representation>
+																			<ChildItemsWidth>LeftWidest</ChildItemsWidth>
+																			<ShowTitle>false</ShowTitle>
+																			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="48"/>
+																			<ChildItems>
+																				<UsualGroup name="Группа2" id="173">
+																					<ShowTitle>false</ShowTitle>
+																					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="174"/>
+																					<ChildItems>
+																						<InputField name="ИмяПодпрограммы" id="49">
+																							<DataPath>Имя</DataPath>
+																							<ReadOnly>true</ReadOnly>
+																							<AutoMaxWidth>false</AutoMaxWidth>
+																							<ContextMenu name="ИмяПодпрограммыКонтекстноеМеню" id="50"/>
+																							<ExtendedTooltip name="ИмяПодпрограммыРасширеннаяПодсказка" id="51"/>
+																							<Events>
+																								<Event name="OnChange">ИмяПриИзменении</Event>
+																							</Events>
+																						</InputField>
+																					</ChildItems>
+																				</UsualGroup>
+																			</ChildItems>
+																		</UsualGroup>
+																		<UsualGroup name="Группа4" id="52">
+																			<Group>Horizontal</Group>
+																			<Representation>None</Representation>
+																			<ShowTitle>false</ShowTitle>
+																			<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="53"/>
+																			<ChildItems>
+																				<CheckBoxField name="ЭтоФункция" id="54">
+																					<DataPath>ЭтоФункция</DataPath>
+																					<ReadOnly>true</ReadOnly>
+																					<TitleLocation>Right</TitleLocation>
+																					<CheckBoxType>Auto</CheckBoxType>
+																					<ContextMenu name="ЭтоФункцияКонтекстноеМеню" id="55"/>
+																					<ExtendedTooltip name="ЭтоФункцияРасширеннаяПодсказка" id="56"/>
+																					<Events>
+																						<Event name="OnChange">ЭтоФункцияПриИзменении</Event>
+																					</Events>
+																				</CheckBoxField>
+																				<CheckBoxField name="Экспорт" id="57">
+																					<DataPath>Экспортная</DataPath>
+																					<ReadOnly>true</ReadOnly>
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Экспорт</v8:content>
+																						</v8:item>
+																					</Title>
+																					<TitleLocation>Right</TitleLocation>
+																					<CheckBoxType>Auto</CheckBoxType>
+																					<ContextMenu name="ЭкспортКонтекстноеМеню" id="58"/>
+																					<ExtendedTooltip name="ЭкспортРасширеннаяПодсказка" id="59"/>
+																				</CheckBoxField>
+																				<CheckBoxField name="Асинх" id="301">
+																					<DataPath>_Асинх</DataPath>
+																					<ReadOnly>true</ReadOnly>
+																					<TitleLocation>Right</TitleLocation>
+																					<CheckBoxType>Auto</CheckBoxType>
+																					<ContextMenu name="АсинхКонтекстноеМеню" id="302"/>
+																					<ExtendedTooltip name="АсинхРасширеннаяПодсказка" id="303"/>
+																				</CheckBoxField>
+																				<InputField name="Контекст" id="60">
+																					<DataPath>Контекст</DataPath>
+																					<ReadOnly>true</ReadOnly>
+																					<DropListButton>true</DropListButton>
+																					<ChoiceList>
+																						<xr:Item>
+																							<xr:Presentation/>
+																							<xr:CheckState>0</xr:CheckState>
+																							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																								<Presentation/>
+																								<Value xsi:type="xs:string">НаКлиенте</Value>
+																							</xr:Value>
+																						</xr:Item>
+																						<xr:Item>
+																							<xr:Presentation/>
+																							<xr:CheckState>0</xr:CheckState>
+																							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																								<Presentation/>
+																								<Value xsi:type="xs:string">НаСервере</Value>
+																							</xr:Value>
+																						</xr:Item>
+																						<xr:Item>
+																							<xr:Presentation/>
+																							<xr:CheckState>0</xr:CheckState>
+																							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																								<Presentation/>
+																								<Value xsi:type="xs:string">НаСервереБезКонтекста</Value>
+																							</xr:Value>
+																						</xr:Item>
+																						<xr:Item>
+																							<xr:Presentation/>
+																							<xr:CheckState>0</xr:CheckState>
+																							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																								<Presentation/>
+																								<Value xsi:type="xs:string">НаКлиентеНаСервереБезКонтекста</Value>
+																							</xr:Value>
+																						</xr:Item>
+																					</ChoiceList>
+																					<ContextMenu name="КонтекстКонтекстноеМеню" id="61"/>
+																					<ExtendedTooltip name="КонтекстРасширеннаяПодсказка" id="62"/>
+																				</InputField>
+																			</ChildItems>
+																		</UsualGroup>
+																		<UsualGroup name="Группа5" id="203">
 																			<Title>
 																				<v8:item>
 																					<v8:lang>ru</v8:lang>
-																					<v8:content>Расширяется</v8:content>
+																					<v8:content>Аннотация расширения</v8:content>
 																				</v8:item>
 																			</Title>
-																			<ContextMenu name="ИмяРасширяемойПодпрограммыКонтекстноеМеню" id="209"/>
-																			<ExtendedTooltip name="ИмяРасширяемойПодпрограммыРасширеннаяПодсказка" id="210"/>
-																		</InputField>
+																			<Group>AlwaysHorizontal</Group>
+																			<Behavior>Collapsible</Behavior>
+																			<CollapsedRepresentationTitle>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Аннотация расширения (развернуть)</v8:content>
+																				</v8:item>
+																			</CollapsedRepresentationTitle>
+																			<Collapsed>true</Collapsed>
+																			<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="204"/>
+																			<ChildItems>
+																				<InputField name="Аннотация" id="205">
+																					<DataPath>Аннотация</DataPath>
+																					<ReadOnly>true</ReadOnly>
+																					<DropListButton>true</DropListButton>
+																					<ChoiceList>
+																						<xr:Item>
+																							<xr:Presentation/>
+																							<xr:CheckState>0</xr:CheckState>
+																							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																								<Presentation/>
+																								<Value xsi:type="xs:string">Перед</Value>
+																							</xr:Value>
+																						</xr:Item>
+																						<xr:Item>
+																							<xr:Presentation/>
+																							<xr:CheckState>0</xr:CheckState>
+																							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																								<Presentation/>
+																								<Value xsi:type="xs:string">После</Value>
+																							</xr:Value>
+																						</xr:Item>
+																						<xr:Item>
+																							<xr:Presentation/>
+																							<xr:CheckState>0</xr:CheckState>
+																							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																								<Presentation/>
+																								<Value xsi:type="xs:string">Вместо</Value>
+																							</xr:Value>
+																						</xr:Item>
+																						<xr:Item>
+																							<xr:Presentation/>
+																							<xr:CheckState>0</xr:CheckState>
+																							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																								<Presentation/>
+																								<Value xsi:type="xs:string">ИзменениеИКонтроль</Value>
+																							</xr:Value>
+																						</xr:Item>
+																					</ChoiceList>
+																					<ContextMenu name="АннотацияКонтекстноеМеню" id="206"/>
+																					<ExtendedTooltip name="АннотацияРасширеннаяПодсказка" id="207"/>
+																				</InputField>
+																				<InputField name="ИмяРасширяемойПодпрограммы" id="208">
+																					<DataPath>ИмяРасширяемогоМетода</DataPath>
+																					<ReadOnly>true</ReadOnly>
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Расширяется</v8:content>
+																						</v8:item>
+																					</Title>
+																					<ContextMenu name="ИмяРасширяемойПодпрограммыКонтекстноеМеню" id="209"/>
+																					<ExtendedTooltip name="ИмяРасширяемойПодпрограммыРасширеннаяПодсказка" id="210"/>
+																				</InputField>
+																			</ChildItems>
+																		</UsualGroup>
 																	</ChildItems>
 																</UsualGroup>
 																<InputField name="Комментарий1" id="98">
@@ -534,6 +588,8 @@
 																<Table name="ПараметрыПодпрограммы" id="101">
 																	<Representation>List</Representation>
 																	<TitleLocation>Top</TitleLocation>
+																	<ChangeRowSet>false</ChangeRowSet>
+																	<ChangeRowOrder>false</ChangeRowOrder>
 																	<AutoMaxHeight>false</AutoMaxHeight>
 																	<AutoMaxRowsCount>false</AutoMaxRowsCount>
 																	<AutoInsertNewRow>true</AutoInsertNewRow>
@@ -577,6 +633,7 @@
 																	<ChildItems>
 																		<InputField name="ПараметрыПодпрограммыИмя" id="114">
 																			<DataPath>ПараметрыПодпрограммы.Имя</DataPath>
+																			<ReadOnly>true</ReadOnly>
 																			<EditMode>EnterOnInput</EditMode>
 																			<ContextMenu name="ПараметрыПодпрограммыИмяКонтекстноеМеню" id="115"/>
 																			<ExtendedTooltip name="ПараметрыПодпрограммыИмяРасширеннаяПодсказка" id="116"/>
@@ -595,12 +652,14 @@
 																		</InputField>
 																		<InputField name="ПараметрыПодпрограммыЗначениеПоУмолчанию" id="120">
 																			<DataPath>ПараметрыПодпрограммы.ЗначениеПоУмолчанию</DataPath>
+																			<ReadOnly>true</ReadOnly>
 																			<EditMode>EnterOnInput</EditMode>
 																			<ContextMenu name="ПараметрыПодпрограммыЗначениеПоУмолчаниюКонтекстноеМеню" id="121"/>
 																			<ExtendedTooltip name="ПараметрыПодпрограммыЗначениеПоУмолчаниюРасширеннаяПодсказка" id="122"/>
 																		</InputField>
 																		<CheckBoxField name="ПараметрыПодпрограммыПоЗначению" id="123">
 																			<DataPath>ПараметрыПодпрограммы.ПоЗначению</DataPath>
+																			<ReadOnly>true</ReadOnly>
 																			<EditMode>EnterOnInput</EditMode>
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="ПараметрыПодпрограммыПоЗначениюКонтекстноеМеню" id="124"/>
@@ -686,6 +745,7 @@
 															<ChildItems>
 																<InputField name="Текст1" id="181">
 																	<DataPath>Текст</DataPath>
+																	<ReadOnly>true</ReadOnly>
 																	<TitleLocation>None</TitleLocation>
 																	<AutoMaxWidth>false</AutoMaxWidth>
 																	<MultiLine>true</MultiLine>
@@ -731,66 +791,77 @@
 																	<ChildItems>
 																		<CheckBoxField name="Клиент" id="215">
 																			<DataPath>Клиент</DataPath>
+																			<ReadOnly>true</ReadOnly>
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="КлиентКонтекстноеМеню" id="216"/>
 																			<ExtendedTooltip name="КлиентРасширеннаяПодсказка" id="217"/>
 																		</CheckBoxField>
 																		<CheckBoxField name="Сервер" id="218">
 																			<DataPath>Сервер</DataPath>
+																			<ReadOnly>true</ReadOnly>
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="СерверКонтекстноеМеню" id="219"/>
 																			<ExtendedTooltip name="СерверРасширеннаяПодсказка" id="220"/>
 																		</CheckBoxField>
 																		<CheckBoxField name="ТонкийКлиент" id="221">
 																			<DataPath>ТонкийКлиент</DataPath>
+																			<ReadOnly>true</ReadOnly>
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="ТонкийКлиентКонтекстноеМеню" id="222"/>
 																			<ExtendedTooltip name="ТонкийКлиентРасширеннаяПодсказка" id="223"/>
 																		</CheckBoxField>
 																		<CheckBoxField name="ВебКлиент" id="224">
 																			<DataPath>ВебКлиент</DataPath>
+																			<ReadOnly>true</ReadOnly>
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="ВебКлиентКонтекстноеМеню" id="225"/>
 																			<ExtendedTooltip name="ВебКлиентРасширеннаяПодсказка" id="226"/>
 																		</CheckBoxField>
 																		<CheckBoxField name="ТолстыйКлиентОбычноеПриложение" id="227">
 																			<DataPath>ТолстыйКлиентОбычноеПриложение</DataPath>
+																			<ReadOnly>true</ReadOnly>
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="ТолстыйКлиентОбычноеПриложениеКонтекстноеМеню" id="228"/>
 																			<ExtendedTooltip name="ТолстыйКлиентОбычноеПриложениеРасширеннаяПодсказка" id="229"/>
 																		</CheckBoxField>
 																		<CheckBoxField name="ТолстыйКлиентУправляемоеПриложение" id="230">
 																			<DataPath>ТолстыйКлиентУправляемоеПриложение</DataPath>
+																			<ReadOnly>true</ReadOnly>
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="ТолстыйКлиентУправляемоеПриложениеКонтекстноеМеню" id="231"/>
 																			<ExtendedTooltip name="ТолстыйКлиентУправляемоеПриложениеРасширеннаяПодсказка" id="232"/>
 																		</CheckBoxField>
 																		<CheckBoxField name="ВнешнееСоединение" id="233">
 																			<DataPath>ВнешнееСоединение</DataPath>
+																			<ReadOnly>true</ReadOnly>
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="ВнешнееСоединениеКонтекстноеМеню" id="234"/>
 																			<ExtendedTooltip name="ВнешнееСоединениеРасширеннаяПодсказка" id="235"/>
 																		</CheckBoxField>
 																		<CheckBoxField name="МобильныйКлиент" id="242">
 																			<DataPath>МобильныйКлиент</DataPath>
+																			<ReadOnly>true</ReadOnly>
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="МобильныйКлиентКонтекстноеМеню" id="243"/>
 																			<ExtendedTooltip name="МобильныйКлиентРасширеннаяПодсказка" id="244"/>
 																		</CheckBoxField>
 																		<CheckBoxField name="МобильноеПриложениеКлиент" id="236">
 																			<DataPath>МобильноеПриложениеКлиент</DataPath>
+																			<ReadOnly>true</ReadOnly>
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="МобильноеПриложениеКлиентКонтекстноеМеню" id="237"/>
 																			<ExtendedTooltip name="МобильноеПриложениеКлиентРасширеннаяПодсказка" id="238"/>
 																		</CheckBoxField>
 																		<CheckBoxField name="МобильноеПриложениеСервер" id="239">
 																			<DataPath>МобильноеПриложениеСервер</DataPath>
+																			<ReadOnly>true</ReadOnly>
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="МобильноеПриложениеСерверКонтекстноеМеню" id="240"/>
 																			<ExtendedTooltip name="МобильноеПриложениеСерверРасширеннаяПодсказка" id="241"/>
 																		</CheckBoxField>
 																		<CheckBoxField name="МобильныйАвтономныйСервер" id="245">
 																			<DataPath>МобильныйАвтономныйСервер</DataPath>
+																			<ReadOnly>true</ReadOnly>
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="МобильныйАвтономныйСерверКонтекстноеМеню" id="246"/>
 																			<ExtendedTooltip name="МобильныйАвтономныйСерверРасширеннаяПодсказка" id="247"/>
@@ -857,6 +928,7 @@
 																	<ChildItems>
 																		<InputField name="Контекст1" id="136">
 																			<DataPath>Контекст</DataPath>
+																			<ReadOnly>true</ReadOnly>
 																			<DropListButton>true</DropListButton>
 																			<ChoiceList>
 																				<xr:Item>
@@ -907,6 +979,7 @@
 																</InputField>
 																<Table name="Переменные" id="322">
 																	<Representation>List</Representation>
+																	<ReadOnly>true</ReadOnly>
 																	<AutoInsertNewRow>true</AutoInsertNewRow>
 																	<EnableStartDrag>true</EnableStartDrag>
 																	<EnableDrag>true</EnableDrag>
@@ -1004,66 +1077,77 @@
 																	<ChildItems>
 																		<CheckBoxField name="Клиент1" id="256">
 																			<DataPath>Клиент</DataPath>
+																			<ReadOnly>true</ReadOnly>
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="Клиент1КонтекстноеМеню" id="257"/>
 																			<ExtendedTooltip name="Клиент1РасширеннаяПодсказка" id="258"/>
 																		</CheckBoxField>
 																		<CheckBoxField name="Сервер1" id="259">
 																			<DataPath>Сервер</DataPath>
+																			<ReadOnly>true</ReadOnly>
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="Сервер1КонтекстноеМеню" id="260"/>
 																			<ExtendedTooltip name="Сервер1РасширеннаяПодсказка" id="261"/>
 																		</CheckBoxField>
 																		<CheckBoxField name="ТонкийКлиент1" id="262">
 																			<DataPath>ТонкийКлиент</DataPath>
+																			<ReadOnly>true</ReadOnly>
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="ТонкийКлиент1КонтекстноеМеню" id="263"/>
 																			<ExtendedTooltip name="ТонкийКлиент1РасширеннаяПодсказка" id="264"/>
 																		</CheckBoxField>
 																		<CheckBoxField name="ВебКлиент1" id="265">
 																			<DataPath>ВебКлиент</DataPath>
+																			<ReadOnly>true</ReadOnly>
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="ВебКлиент1КонтекстноеМеню" id="266"/>
 																			<ExtendedTooltip name="ВебКлиент1РасширеннаяПодсказка" id="267"/>
 																		</CheckBoxField>
 																		<CheckBoxField name="ТолстыйКлиентОбычноеПриложение1" id="268">
 																			<DataPath>ТолстыйКлиентОбычноеПриложение</DataPath>
+																			<ReadOnly>true</ReadOnly>
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="ТолстыйКлиентОбычноеПриложение1КонтекстноеМеню" id="269"/>
 																			<ExtendedTooltip name="ТолстыйКлиентОбычноеПриложение1РасширеннаяПодсказка" id="270"/>
 																		</CheckBoxField>
 																		<CheckBoxField name="ТолстыйКлиентУправляемоеПриложение1" id="271">
 																			<DataPath>ТолстыйКлиентУправляемоеПриложение</DataPath>
+																			<ReadOnly>true</ReadOnly>
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="ТолстыйКлиентУправляемоеПриложение1КонтекстноеМеню" id="272"/>
 																			<ExtendedTooltip name="ТолстыйКлиентУправляемоеПриложение1РасширеннаяПодсказка" id="273"/>
 																		</CheckBoxField>
 																		<CheckBoxField name="ВнешнееСоединение1" id="274">
 																			<DataPath>ВнешнееСоединение</DataPath>
+																			<ReadOnly>true</ReadOnly>
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="ВнешнееСоединение1КонтекстноеМеню" id="275"/>
 																			<ExtendedTooltip name="ВнешнееСоединение1РасширеннаяПодсказка" id="276"/>
 																		</CheckBoxField>
 																		<CheckBoxField name="МобильныйКлиент1" id="277">
 																			<DataPath>МобильныйКлиент</DataPath>
+																			<ReadOnly>true</ReadOnly>
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="МобильныйКлиент1КонтекстноеМеню" id="278"/>
 																			<ExtendedTooltip name="МобильныйКлиент1РасширеннаяПодсказка" id="279"/>
 																		</CheckBoxField>
 																		<CheckBoxField name="МобильноеПриложениеКлиент1" id="280">
 																			<DataPath>МобильноеПриложениеКлиент</DataPath>
+																			<ReadOnly>true</ReadOnly>
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="МобильноеПриложениеКлиент1КонтекстноеМеню" id="281"/>
 																			<ExtendedTooltip name="МобильноеПриложениеКлиент1РасширеннаяПодсказка" id="282"/>
 																		</CheckBoxField>
 																		<CheckBoxField name="МобильноеПриложениеСервер1" id="283">
 																			<DataPath>МобильноеПриложениеСервер</DataPath>
+																			<ReadOnly>true</ReadOnly>
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="МобильноеПриложениеСервер1КонтекстноеМеню" id="284"/>
 																			<ExtendedTooltip name="МобильноеПриложениеСервер1РасширеннаяПодсказка" id="285"/>
 																		</CheckBoxField>
 																		<CheckBoxField name="МобильныйАвтономныйСервер1" id="286">
 																			<DataPath>МобильныйАвтономныйСервер</DataPath>
+																			<ReadOnly>true</ReadOnly>
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="МобильныйАвтономныйСервер1КонтекстноеМеню" id="287"/>
 																			<ExtendedTooltip name="МобильныйАвтономныйСервер1РасширеннаяПодсказка" id="288"/>
@@ -1247,6 +1331,7 @@
 															<ChildItems>
 																<InputField name="Текст" id="164">
 																	<DataPath>Текст</DataPath>
+																	<ReadOnly>true</ReadOnly>
 																	<AutoMaxWidth>false</AutoMaxWidth>
 																	<MultiLine>true</MultiLine>
 																	<ExtendedEdit>true</ExtendedEdit>
@@ -1272,66 +1357,77 @@
 															<ChildItems>
 																<CheckBoxField name="Клиент2" id="356">
 																	<DataPath>Клиент</DataPath>
+																	<ReadOnly>true</ReadOnly>
 																	<CheckBoxType>Auto</CheckBoxType>
 																	<ContextMenu name="Клиент2КонтекстноеМеню" id="357"/>
 																	<ExtendedTooltip name="Клиент2РасширеннаяПодсказка" id="358"/>
 																</CheckBoxField>
 																<CheckBoxField name="Сервер2" id="359">
 																	<DataPath>Сервер</DataPath>
+																	<ReadOnly>true</ReadOnly>
 																	<CheckBoxType>Auto</CheckBoxType>
 																	<ContextMenu name="Сервер2КонтекстноеМеню" id="360"/>
 																	<ExtendedTooltip name="Сервер2РасширеннаяПодсказка" id="361"/>
 																</CheckBoxField>
 																<CheckBoxField name="ТонкийКлиент2" id="362">
 																	<DataPath>ТонкийКлиент</DataPath>
+																	<ReadOnly>true</ReadOnly>
 																	<CheckBoxType>Auto</CheckBoxType>
 																	<ContextMenu name="ТонкийКлиент2КонтекстноеМеню" id="363"/>
 																	<ExtendedTooltip name="ТонкийКлиент2РасширеннаяПодсказка" id="364"/>
 																</CheckBoxField>
 																<CheckBoxField name="ВебКлиент2" id="365">
 																	<DataPath>ВебКлиент</DataPath>
+																	<ReadOnly>true</ReadOnly>
 																	<CheckBoxType>Auto</CheckBoxType>
 																	<ContextMenu name="ВебКлиент2КонтекстноеМеню" id="366"/>
 																	<ExtendedTooltip name="ВебКлиент2РасширеннаяПодсказка" id="367"/>
 																</CheckBoxField>
 																<CheckBoxField name="ТолстыйКлиентОбычноеПриложение2" id="368">
 																	<DataPath>ТолстыйКлиентОбычноеПриложение</DataPath>
+																	<ReadOnly>true</ReadOnly>
 																	<CheckBoxType>Auto</CheckBoxType>
 																	<ContextMenu name="ТолстыйКлиентОбычноеПриложение2КонтекстноеМеню" id="369"/>
 																	<ExtendedTooltip name="ТолстыйКлиентОбычноеПриложение2РасширеннаяПодсказка" id="370"/>
 																</CheckBoxField>
 																<CheckBoxField name="ТолстыйКлиентУправляемоеПриложение2" id="371">
 																	<DataPath>ТолстыйКлиентУправляемоеПриложение</DataPath>
+																	<ReadOnly>true</ReadOnly>
 																	<CheckBoxType>Auto</CheckBoxType>
 																	<ContextMenu name="ТолстыйКлиентУправляемоеПриложение2КонтекстноеМеню" id="372"/>
 																	<ExtendedTooltip name="ТолстыйКлиентУправляемоеПриложение2РасширеннаяПодсказка" id="373"/>
 																</CheckBoxField>
 																<CheckBoxField name="ВнешнееСоединение2" id="374">
 																	<DataPath>ВнешнееСоединение</DataPath>
+																	<ReadOnly>true</ReadOnly>
 																	<CheckBoxType>Auto</CheckBoxType>
 																	<ContextMenu name="ВнешнееСоединение2КонтекстноеМеню" id="375"/>
 																	<ExtendedTooltip name="ВнешнееСоединение2РасширеннаяПодсказка" id="376"/>
 																</CheckBoxField>
 																<CheckBoxField name="МобильныйКлиент2" id="377">
 																	<DataPath>МобильныйКлиент</DataPath>
+																	<ReadOnly>true</ReadOnly>
 																	<CheckBoxType>Auto</CheckBoxType>
 																	<ContextMenu name="МобильныйКлиент2КонтекстноеМеню" id="378"/>
 																	<ExtendedTooltip name="МобильныйКлиент2РасширеннаяПодсказка" id="379"/>
 																</CheckBoxField>
 																<CheckBoxField name="МобильноеПриложениеКлиент2" id="380">
 																	<DataPath>МобильноеПриложениеКлиент</DataPath>
+																	<ReadOnly>true</ReadOnly>
 																	<CheckBoxType>Auto</CheckBoxType>
 																	<ContextMenu name="МобильноеПриложениеКлиент2КонтекстноеМеню" id="381"/>
 																	<ExtendedTooltip name="МобильноеПриложениеКлиент2РасширеннаяПодсказка" id="382"/>
 																</CheckBoxField>
 																<CheckBoxField name="МобильноеПриложениеСервер2" id="383">
 																	<DataPath>МобильноеПриложениеСервер</DataPath>
+																	<ReadOnly>true</ReadOnly>
 																	<CheckBoxType>Auto</CheckBoxType>
 																	<ContextMenu name="МобильноеПриложениеСервер2КонтекстноеМеню" id="384"/>
 																	<ExtendedTooltip name="МобильноеПриложениеСервер2РасширеннаяПодсказка" id="385"/>
 																</CheckBoxField>
 																<CheckBoxField name="МобильныйАвтономныйСервер2" id="386">
 																	<DataPath>МобильныйАвтономныйСервер</DataPath>
+																	<ReadOnly>true</ReadOnly>
 																	<CheckBoxType>Auto</CheckBoxType>
 																	<ContextMenu name="МобильныйАвтономныйСервер2КонтекстноеМеню" id="387"/>
 																	<ExtendedTooltip name="МобильныйАвтономныйСервер2РасширеннаяПодсказка" id="388"/>
@@ -2060,6 +2156,21 @@
 				</Column>
 			</Columns>
 		</Attribute>
+		<Attribute name="СигнатураТекстом" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сигнатура текстом</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ДобавитьПодчиненныйВидЭлемента" id="2">
@@ -2136,6 +2247,24 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОчиститьДеревоСтруктуры</Action>
+		</Command>
+		<Command name="РазрешитьРедактирование" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разрешить редактирование</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разрешить редактирование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ОМ_РедактированиеРеквизитов</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 		</Command>
 	</Commands>
 </Form>

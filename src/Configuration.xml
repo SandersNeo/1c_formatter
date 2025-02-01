@@ -67,6 +67,7 @@
 			<Subsystem>ОМ_Оформлятор</Subsystem>
 			<CommonPicture>ОМ_Переменная</CommonPicture>
 			<CommonPicture>ОМ_ПроцедураФункция</CommonPicture>
+			<CommonPicture>ОМ_РедактированиеРеквизитов</CommonPicture>
 			<Role>ОМ_ОсновнаяРоль</Role>
 			<CommonModule>КлиентИИ</CommonModule>
 			<DataProcessor>ОМ_ОформляторМодулей</DataProcessor>
