@@ -79,6 +79,7 @@
 			<DataProcessor>ОМ_Компонент_УстановкаИнструкцийПрепроцессора</DataProcessor>
 			<DataProcessor>ОМ_Компонент_АнализМодуля</DataProcessor>
 			<DataProcessor>ОМ_Компонент_ДокументированиеМетодов</DataProcessor>
+			<DataProcessor>ОМ_Компонент_ВставкаЗавершающихКомментариев</DataProcessor>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>

@@ -21,6 +21,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ОМ_Компонент_УстановкаИнструкцийПрепроцессора</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ОМ_Компонент_АнализМодуля</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ОМ_Компонент_ДокументированиеМетодов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ОМ_Компонент_ВставкаЗавершающихКомментариев</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

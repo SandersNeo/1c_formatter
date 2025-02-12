@@ -385,7 +385,7 @@
 							<v8:content>Страница создаваемые объекты</v8:content>
 						</v8:item>
 					</ToolTip>
-					<TitleDataPath>КоличествоИспользуемыеПоля</TitleDataPath>
+					<TitleDataPath>КоличествоСоздаваемыеОбъекты</TitleDataPath>
 					<ExtendedTooltip name="СтраницаСоздаваемыеОбъектыРасширеннаяПодсказка" id="105"/>
 					<ChildItems>
 						<Table name="ТаблицаСоздаваемыеОбъекты" id="106">
