@@ -68,6 +68,7 @@
 			<CommonPicture>ОМ_Переменная</CommonPicture>
 			<CommonPicture>ОМ_ПроцедураФункция</CommonPicture>
 			<CommonPicture>ОМ_РедактированиеРеквизитов</CommonPicture>
+			<CommonPicture>ОМ_ТипыЭлементовМодуля</CommonPicture>
 			<Role>ОМ_ОсновнаяРоль</Role>
 			<CommonModule>КлиентИИ</CommonModule>
 			<DataProcessor>ОМ_ОформляторМодулей</DataProcessor>

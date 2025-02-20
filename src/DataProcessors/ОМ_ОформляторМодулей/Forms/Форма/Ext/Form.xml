@@ -70,8 +70,8 @@
 									<DataPath>СтруктураМодуля</DataPath>
 									<RowPictureDataPath>СтруктураМодуля.НомерКартинки</RowPictureDataPath>
 									<RowsPicture>
-										<xr:Abs>RowsPicture.bmp</xr:Abs>
-										<xr:LoadTransparent>false</xr:LoadTransparent>
+										<xr:Ref>CommonPicture.ОМ_ТипыЭлементовМодуля</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
 									</RowsPicture>
 									<CommandSet>
 										<ExcludedCommand>Add</ExcludedCommand>
