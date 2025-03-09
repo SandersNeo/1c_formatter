@@ -81,6 +81,7 @@
 			<DataProcessor>ОМ_Компонент_АнализМодуля</DataProcessor>
 			<DataProcessor>ОМ_Компонент_ДокументированиеМетодов</DataProcessor>
 			<DataProcessor>ОМ_Компонент_ВставкаЗавершающихКомментариев</DataProcessor>
+			<DataProcessor>ОМ_Компонент_СортировкаМетодов</DataProcessor>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>
