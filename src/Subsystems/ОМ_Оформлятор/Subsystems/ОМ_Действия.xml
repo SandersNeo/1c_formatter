@@ -23,6 +23,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ОМ_Компонент_ДокументированиеМетодов</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ОМ_Компонент_ВставкаЗавершающихКомментариев</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ОМ_Компонент_СортировкаМетодов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ОМ_Компонент_ОформлениеТелаМетодов</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>
