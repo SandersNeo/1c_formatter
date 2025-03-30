@@ -157,16 +157,13 @@
 													<ContextMenu name="МетодыКДокументированиюИмя1КонтекстноеМеню" id="133"/>
 													<ExtendedTooltip name="МетодыКДокументированиюИмя1РасширеннаяПодсказка" id="134"/>
 												</InputField>
-												<InputField name="МетодыКДокументированиюТекстМетода1" id="135">
+												<TextDocumentField name="МетодыКДокументированиюТекстМетода1" id="135">
 													<DataPath>МетодыКДокументированию[0].ТекстМетода</DataPath>
 													<ReadOnly>true</ReadOnly>
 													<EditMode>EnterOnInput</EditMode>
-													<AutoMaxWidth>false</AutoMaxWidth>
-													<MultiLine>true</MultiLine>
-													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 													<ContextMenu name="МетодыКДокументированиюТекстМетода1КонтекстноеМеню" id="136"/>
 													<ExtendedTooltip name="МетодыКДокументированиюТекстМетода1РасширеннаяПодсказка" id="137"/>
-												</InputField>
+												</TextDocumentField>
 											</ChildItems>
 										</Page>
 										<Page name="СтраницаНесколькоМетодов" id="84">
@@ -266,16 +263,13 @@
 														</InputField>
 													</ChildItems>
 												</Table>
-												<InputField name="МетодыКДокументированиюТекстМетода" id="104">
+												<TextDocumentField name="МетодыКДокументированиюТекстМетода" id="104">
 													<DataPath>Items.МетодыКДокументированию.CurrentData.ТекстМетода</DataPath>
 													<ReadOnly>true</ReadOnly>
 													<EditMode>EnterOnInput</EditMode>
-													<AutoMaxWidth>false</AutoMaxWidth>
-													<MultiLine>true</MultiLine>
-													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 													<ContextMenu name="МетодыКДокументированиюТекстМетодаКонтекстноеМеню" id="105"/>
 													<ExtendedTooltip name="МетодыКДокументированиюТекстМетодаРасширеннаяПодсказка" id="106"/>
-												</InputField>
+												</TextDocumentField>
 											</ChildItems>
 										</Page>
 									</ChildItems>

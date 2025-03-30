@@ -114,17 +114,13 @@
 													<ContextMenu name="МетодыКДокументированиюИмя1КонтекстноеМеню" id="133"/>
 													<ExtendedTooltip name="МетодыКДокументированиюИмя1РасширеннаяПодсказка" id="134"/>
 												</InputField>
-												<InputField name="МетодыКДокументированиюТекстМетода1" id="135">
+												<TextDocumentField name="МетодыКДокументированиюТекстМетода1" id="135">
 													<DataPath>МетодыКОформлению[0].Тело</DataPath>
 													<ReadOnly>true</ReadOnly>
 													<EditMode>EnterOnInput</EditMode>
-													<AutoMaxWidth>false</AutoMaxWidth>
-													<HorizontalStretch>true</HorizontalStretch>
-													<MultiLine>true</MultiLine>
-													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 													<ContextMenu name="МетодыКДокументированиюТекстМетода1КонтекстноеМеню" id="136"/>
 													<ExtendedTooltip name="МетодыКДокументированиюТекстМетода1РасширеннаяПодсказка" id="137"/>
-												</InputField>
+												</TextDocumentField>
 											</ChildItems>
 										</Page>
 										<Page name="СтраницаНесколькоМетодов" id="84">
@@ -222,17 +218,13 @@
 														</InputField>
 													</ChildItems>
 												</Table>
-												<InputField name="МетодыКДокументированиюТекстМетода" id="104">
+												<TextDocumentField name="МетодыКДокументированиюТекстМетода" id="104">
 													<DataPath>Items.МетодыКОформлению.CurrentData.Тело</DataPath>
 													<ReadOnly>true</ReadOnly>
 													<EditMode>EnterOnInput</EditMode>
-													<AutoMaxWidth>false</AutoMaxWidth>
-													<Height>6</Height>
-													<MultiLine>true</MultiLine>
-													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 													<ContextMenu name="МетодыКДокументированиюТекстМетодаКонтекстноеМеню" id="105"/>
 													<ExtendedTooltip name="МетодыКДокументированиюТекстМетодаРасширеннаяПодсказка" id="106"/>
-												</InputField>
+												</TextDocumentField>
 											</ChildItems>
 										</Page>
 									</ChildItems>
@@ -256,28 +248,52 @@
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаОписаниеРасширеннаяПодсказка" id="142"/>
 									<ChildItems>
-										<Button name="Оформить" id="160">
-											<Type>UsualButton</Type>
-											<Representation>PictureAndText</Representation>
-											<AutoMaxWidth>false</AutoMaxWidth>
-											<HorizontalStretch>true</HorizontalStretch>
-											<CommandName>Form.Command.Оформить</CommandName>
-											<Picture>
-												<xr:Ref>StdPicture.Refresh</xr:Ref>
-												<xr:LoadTransparent>true</xr:LoadTransparent>
-											</Picture>
-											<ExtendedTooltip name="ОформитьРасширеннаяПодсказка" id="161"/>
-										</Button>
-										<InputField name="МетодыКДокументированиюТелоМетодаОформленное" id="157">
+										<UsualGroup name="ГруппаКомандаОформления" id="162">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа команда оформления</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа команда оформления</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаКомандаОформленияРасширеннаяПодсказка" id="163"/>
+											<ChildItems>
+												<Button name="Оформить" id="160">
+													<Type>UsualButton</Type>
+													<Representation>PictureAndText</Representation>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<CommandName>Form.Command.Оформить</CommandName>
+													<Picture>
+														<xr:Ref>StdPicture.Refresh</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="ОформитьРасширеннаяПодсказка" id="161"/>
+												</Button>
+												<CheckBoxField name="ПроверитьКодПослеОформления" id="164">
+													<DataPath>ПроверитьКодПослеОформления</DataPath>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ПроверитьКодПослеОформленияКонтекстноеМеню" id="165"/>
+													<ExtendedTooltip name="ПроверитьКодПослеОформленияРасширеннаяПодсказка" id="166"/>
+													<Events>
+														<Event name="OnChange">ПроверитьКодПослеОформленияПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+											</ChildItems>
+										</UsualGroup>
+										<TextDocumentField name="МетодыКДокументированиюТелоМетодаОформленное" id="157">
 											<DataPath>Items.МетодыКОформлению.CurrentData.ТелоОформленное</DataPath>
 											<ReadOnly>true</ReadOnly>
-											<AutoMaxWidth>false</AutoMaxWidth>
-											<MultiLine>true</MultiLine>
-											<ExtendedEdit>true</ExtendedEdit>
-											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 											<ContextMenu name="МетодыКДокументированиюТелоМетодаОформленноеКонтекстноеМеню" id="158"/>
 											<ExtendedTooltip name="МетодыКДокументированиюТелоМетодаОформленноеРасширеннаяПодсказка" id="159"/>
-										</InputField>
+										</TextDocumentField>
 									</ChildItems>
 								</UsualGroup>
 							</ChildItems>
@@ -315,6 +331,22 @@
 							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 							<ContextMenu name="ПравилаОформленияКонтекстноеМеню" id="151"/>
 							<ExtendedTooltip name="ПравилаОформленияРасширеннаяПодсказка" id="152"/>
+						</InputField>
+						<InputField name="ПравилаИзменения" id="167">
+							<DataPath>ПравилаИзменения</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Опишите здесь правила, которые могут приводить к изменению кода. Эти правила добавляются к правилам оформления и срабатывают только при выключенной проверке кода после оформления</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowTop</ToolTipRepresentation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MultiLine>true</MultiLine>
+							<ExtendedEdit>true</ExtendedEdit>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ПравилаИзмененияКонтекстноеМеню" id="168"/>
+							<ExtendedTooltip name="ПравилаИзмененияРасширеннаяПодсказка" id="169"/>
 						</InputField>
 					</ChildItems>
 				</Page>
@@ -586,6 +618,35 @@
 			</Type>
 			<Save>
 				<Field>ПравилаОформления</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ПроверитьКодПослеОформления" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить код после оформления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПравилаИзменения" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Правила изменения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ПравилаИзменения</Field>
 			</Save>
 		</Attribute>
 	</Attributes>

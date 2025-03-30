@@ -55,16 +55,23 @@
 	КонецЕсли;
 	
 	ПроверитьКодПослеОформления = Истина;
+	ПравилаИзменения = "";
 КонецПроцедуры
 
 &НаКлиенте
 Процедура ПриОткрытии(Отказ)
 	Элементы.МетодыКОформлению.ТекущаяСтрока = МетодыКОформлению[0].ПолучитьИдентификатор();
+	УстановитьВидимостьДоступностьЭлементовФормы();
 КонецПроцедуры
 
 #КонецОбласти
 
-#Область ОбработчикиСобытийЭлементовТаблицыФормыМетодыКДокументированию
+#Область ОбработчикиСобытийЭлементовШапкиФормы
+
+&НаКлиенте
+Процедура ПроверитьКодПослеОформленияПриИзменении(Элемент)
+	УстановитьВидимостьДоступностьЭлементовФормы();
+КонецПроцедуры
 
 #КонецОбласти
 
@@ -78,7 +85,11 @@
 		КонецЕсли;
 		
 		Если ЗначениеЗаполнено(КлючAPI) Тогда
-			ТекстПромпта = СформироватьПромптДляОформленияКода(Метод.Тело);
+			Если ПроверитьКодПослеОформления Тогда
+				ТекстПромпта = СформироватьПромптДляОформленияКода(Метод.Тело);
+			Иначе
+				ТекстПромпта = СформироватьПромптДляСвободногоОформленияКода(Метод.Тело);
+			КонецЕсли;
 			ОтветМоделиСтр = КлиентИИ.ОтправитьЗапросOpenAI(ТекстПромпта, КлючAPI, БазовыйАдрес, Модель);
 		Иначе
 			ОтветМоделиСтр = ОформитьМетодСервисомПоУмолчанию(Метод);
@@ -132,6 +143,17 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+
+&НаКлиенте
+Процедура УстановитьВидимостьДоступностьЭлементовФормы()
+	Если ПроверитьКодПослеОформления Тогда
+		Элементы.ПроверитьКодПослеОформления.ЦветТекстаЗаголовка = Элементы.Метод.ЦветТекстаЗаголовка;
+		Элементы.ПравилаИзменения.Видимость = Ложь;
+	Иначе
+		Элементы.ПроверитьКодПослеОформления.ЦветТекстаЗаголовка = WebЦвета.Красный;
+		Элементы.ПравилаИзменения.Видимость = Истина;
+	КонецЕсли;
+КонецПроцедуры
 
 &НаКлиенте
 Функция ВыделитьКодИзОтвета(ОтветМоделиСтр)
@@ -311,6 +333,39 @@
 	КонецЦикла;
 	
 	Возврат "";
+КонецФункции
+
+&НаКлиенте
+Функция СформироватьПромптДляСвободногоОформленияКода(Код)
+	ТекстПромпта = 
+	"Analyze the provided 1C code and format it according to the guidelines specified in the <rules>[rules]</rules> block. Improve the code readability and style while maintaining the original logic. You may standardize naming conventions and adjust formatting for better readability.
+	|
+	|# Steps
+	|
+	|1. **Code Analysis**: Review the provided 1C code to understand its logic and structure.
+	|2. **Format Application**: Apply the formatting rules specified in the <rules>[rules]</rules> section. This includes layout, indentation, spacing, and standardizing style.
+	|3. **Logic Preservation**: Ensure that the original logic of the code remains unchanged during formatting.
+	|4. **Output Generation**: Produce the formatted 1C code adhering to the guidelines.
+	|
+	|# Output Format
+	|
+	|The output should be the 1C code with applied formatting rules, maintaining the logic integrity. Present the code in plain text with improved readability.
+	|
+	|# Notes
+	|
+	|- Focus on improving code readability and consistency.
+	|- Standardize spacing, indentation, and letter casing according to the rules.
+	|
+	|<rules>
+	|" + ПравилаОформления + Символы.ПС + ПравилаИзменения + Символы.ПС + "
+	|</rules>
+	|
+	|# Code to format:
+	|```1C
+	|" + Код + "
+	|```";
+
+	Возврат ТекстПромпта;
 КонецФункции
 
 &НаКлиенте
