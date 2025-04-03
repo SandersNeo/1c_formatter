@@ -109,6 +109,7 @@
 													<DataPath>МетодыКОформлению[0].Имя</DataPath>
 													<ReadOnly>true</ReadOnly>
 													<EditMode>EnterOnInput</EditMode>
+													<AutoMaxWidth>false</AutoMaxWidth>
 													<HorizontalStretch>true</HorizontalStretch>
 													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 													<ContextMenu name="МетодыКДокументированиюИмя1КонтекстноеМеню" id="133"/>

@@ -70,7 +70,7 @@
 			<CommonPicture>ОМ_РедактированиеРеквизитов</CommonPicture>
 			<CommonPicture>ОМ_ТипыЭлементовМодуля</CommonPicture>
 			<Role>ОМ_ОсновнаяРоль</Role>
-			<CommonModule>КлиентИИ</CommonModule>
+			<CommonModule>ОМ_КлиентИИ</CommonModule>
 			<DataProcessor>ОМ_ОформляторМодулей</DataProcessor>
 			<DataProcessor>ОМ_Парсер_ПарсерВстроенногоЯзыка</DataProcessor>
 			<DataProcessor>ОМ_Парсер_ГлобальноеОкружение</DataProcessor>

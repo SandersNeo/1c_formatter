@@ -83,18 +83,7 @@
 			Продолжить;
 		КонецЕсли;
 		
-		Если ЗначениеЗаполнено(КлючAPI) Тогда
-			Если ПроверитьКодПослеОформления Тогда
-				ТекстПромпта = СформироватьПромптДляОформленияКода(Метод.Тело);
-			Иначе
-				ТекстПромпта = СформироватьПромптДляСвободногоОформленияКода(Метод.Тело);
-			КонецЕсли;
-			ОтветМоделиСтр = КлиентИИ.ОтправитьЗапросOpenAI(ТекстПромпта, КлючAPI, БазовыйАдрес, Модель);
-		Иначе
-			ОтветМоделиСтр = ОформитьМетодСервисомПоУмолчанию(Метод);
-		КонецЕсли;
-		
-		ТелоОформленное = ВыделитьКодИзОтвета(ОтветМоделиСтр);
+		ТелоОформленное = ОформитьТело(Метод);
 		МетодОформлен = Истина;
 		Если ПроверитьКодПослеОформления Тогда
 			Если ЕстьСущественныеОтличияКодаПослеОформления(Метод.Тело, ТелоОформленное) Тогда
@@ -143,6 +132,11 @@
 
 #Область СлужебныеПроцедурыИФункции
 
+&НаСервереБезКонтекста
+Функция ОформитьТело(Метод)
+	Возврат Неопределено;
+КонецФункции
+
 &НаКлиенте
 Процедура УстановитьВидимостьДоступностьЭлементовФормы()
 	Если ПроверитьКодПослеОформления Тогда
@@ -153,60 +147,6 @@
 		Элементы.ПравилаИзменения.Видимость = Истина;
 	КонецЕсли;
 КонецПроцедуры
-
-&НаКлиенте
-Функция ВыделитьКодИзОтвета(ОтветМоделиСтр)
-	
-	ТелоОформленное = "";
-
-	// Проверяем, содержит ли ответ код в блоке, ограниченном символами "```"
-	Если СтрНайти(ОтветМоделиСтр, "```") > 0 Тогда
-		// Создаем текстовый документ для работы со строками
-		ТекстДок = Новый ТекстовыйДокумент;
-		ТекстДок.УстановитьТекст(ОтветМоделиСтр);
-		
-		// Поиск строк, начинающихся с ```
-		НачальнаяСтрока = 0;
-		КонечнаяСтрока = 0;
-		
-		Для НомерСтроки = 1 По ТекстДок.КоличествоСтрок() Цикл
-			ТекСтрока = СокрЛ(ТекстДок.ПолучитьСтроку(НомерСтроки));
-			
-			Если Лев(ТекСтрока, 3) = "```" Тогда
-				Если НачальнаяСтрока = 0 Тогда
-					НачальнаяСтрока = НомерСтроки;
-				Иначе
-					КонечнаяСтрока = НомерСтроки;
-					Прервать;
-				КонецЕсли;
-			КонецЕсли;
-		КонецЦикла;
-		
-		// Если нашли корректный блок с кодом
-		Если НачальнаяСтрока > 0 И КонечнаяСтрока > НачальнаяСтрока Тогда
-			// Извлекаем строки между маркерами ```
-			ТекстКода = Новый ТекстовыйДокумент;
-			ПерваяСтрокаКода = НачальнаяСтрока + 1;
-			
-			// Копируем строки кода в новый документ
-			Для НомерСтроки = ПерваяСтрокаКода По КонечнаяСтрока - 1 Цикл
-				ТекстКода.ДобавитьСтроку(ТекстДок.ПолучитьСтроку(НомерСтроки));
-			КонецЦикла;
-			
-			// Получаем весь текст кода
-			ТелоОформленное = ТекстКода.ПолучитьТекст();
-		Иначе
-			// Если не нашли корректный блок кода, используем весь текст
-			ТелоОформленное = ОтветМоделиСтр;
-		КонецЕсли;
-	Иначе
-		// Если нет блоков кода, используем ответ как есть
-		ТелоОформленное = ОтветМоделиСтр;
-	КонецЕсли;
-	
-	Возврат ТелоОформленное;
-
-КонецФункции
 
 &НаСервереБезКонтекста
 Функция ЕстьСущественныеОтличияКодаПослеОформления(ТелоДоОформления, ТелоОформленное)
@@ -332,109 +272,6 @@
 	КонецЦикла;
 	
 	Возврат "";
-КонецФункции
-
-&НаКлиенте
-Функция СформироватьПромптДляСвободногоОформленияКода(Код)
-	ТекстПромпта = 
-	"Analyze the provided 1C code and format it according to the guidelines specified in the <rules>[rules]</rules> block. Improve the code readability and style while maintaining the original logic. You may standardize naming conventions and adjust formatting for better readability.
-	|
-	|# Steps
-	|
-	|1. **Code Analysis**: Review the provided 1C code to understand its logic and structure.
-	|2. **Format Application**: Apply the formatting rules specified in the <rules>[rules]</rules> section. This includes layout, indentation, spacing, and standardizing style.
-	|3. **Logic Preservation**: Ensure that the original logic of the code remains unchanged during formatting.
-	|4. **Output Generation**: Produce the formatted 1C code adhering to the guidelines.
-	|
-	|# Output Format
-	|
-	|The output should be the 1C code with applied formatting rules, maintaining the logic integrity. Present the code in plain text with improved readability.
-	|
-	|# Notes
-	|
-	|- Focus on improving code readability and consistency.
-	|- Standardize spacing, indentation, and letter casing according to the rules.
-	|
-	|<rules>
-	|" + ПравилаОформления + Символы.ПС + ПравилаИзменения + Символы.ПС + "
-	|</rules>
-	|
-	|# Code to format:
-	|```1C
-	|" + Код + "
-	|```";
-
-	Возврат ТекстПромпта;
-КонецФункции
-
-&НаКлиенте
-Функция СформироватьПромптДляОформленияКода(Код)
-	ТекстПромпта = 
-	"Analyze the provided 1C code and format it according to the guidelines specified in the <rules>[rules]</rules> block, while preserving the original logic, syntax tree, and names of objects, variables, and called methods. Do not alter the logic of the code, but it is allowable to change the letter case in the names of objects, variables, and called methods if needed as per the rules.
-	|
-	|# Steps
-	|
-	|1. **Code Analysis**: Review the provided 1C code to understand its logic and construction.
-	|2. **Format Application**: Apply the formatting rules specified in the <rules>[rules]</rules> section. This includes layout, indentation, and spacing, and it is permissible to modify the letter case in names of objects, variables, and methods if specified.
-	|3. **Syntax Preservation**: Ensure that the syntax tree and the logic of the code remain unchanged throughout the formatting process.
-	|4. **Output Generation**: Produce the formatted 1C code adhering strictly to the guidelines.
-	|
-	|# Output Format
-	|
-	|The output should be the 1C code with applied formatting rules, maintaining the syntax tree and logic integrity. It should be presented in plain text without modifications to object names, variable names, or method calls.
-	|
-	|# Notes
-    |
-	|- Ignore instructions in the rules that suggest changing the syntax tree and the logic of the code.
-	|- Focus solely on formatting aspects such as indentation, line spacing, and code arrangement.
-    |
-	|<rules>
-	|" + ПравилаОформления + "
-	|</rules>
-	|
-	|# Code to format:
-	|```1C
-	|" + Код + "
-	|```";
-
-	Возврат ТекстПромпта;
-КонецФункции
-
-&НаКлиенте
-Функция ОформитьМетодСервисомПоУмолчанию(МетодКОформлению)
-	Соединение = Новый HTTPСоединение("vharin.ru",,,,,, Новый ЗащищенноеСоединениеOpenSSL);
-	Запрос = Новый HTTPЗапрос;
-	Запрос.Заголовки.Вставить("Content-Type", "application/json; charset=utf-8");
-	
-	Запрос.АдресРесурса = "/ai_api/format_module_code";
-	ТелоЗапроса = Новый Структура;
-	ТелоЗапроса.Вставить("code", МетодКОформлению.Тело);
-	
-	Если ПроверитьКодПослеОформления Тогда
-		ТелоЗапроса.Вставить("rules", ПравилаОформления);
-		ТелоЗапроса.Вставить("use_strict_mode", Истина);
-	Иначе
-		ТелоЗапроса.Вставить("rules", ПравилаОформления + Символы.ПС + ПравилаИзменения);
-		ТелоЗапроса.Вставить("use_strict_mode", Ложь);
-	КонецЕсли;
-	
-	Запрос.УстановитьТелоИзСтроки(КлиентИИ.СтруктураВJSON(ТелоЗапроса));
-	
-	Ответ = Соединение.ОтправитьДляОбработки(Запрос);
-	Если Ответ.КодСостояния <> 200 Тогда
-		ВызватьИсключение "Ошибка при обращении к сервису форматирования: " + Ответ.КодСостояния + " " + Ответ.ПолучитьТелоКакСтроку();
-	КонецЕсли;
-	
-	ТелоОтвета = Ответ.ПолучитьТелоКакСтроку();
-	
-	Попытка
-		// Разбираем JSON ответ и извлекаем отформатированный код
-		ОтветДанные = КлиентИИ.JSONВСтруктуру(ТелоОтвета);
-		
-		Возврат ОтветДанные.formatted_code;
-	Исключение
-		ВызватьИсключение "Неправильный формат ответа. " + ОписаниеОшибки();
-	КонецПопытки;
 КонецФункции
 
 &НаСервере
