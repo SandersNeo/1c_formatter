@@ -73,6 +73,7 @@
 			<CommonModule>ОМ_КлиентИИ</CommonModule>
 			<DataProcessor>ОМ_ОформляторМодулей</DataProcessor>
 			<DataProcessor>ОМ_Парсер_ПарсерВстроенногоЯзыка</DataProcessor>
+			<DataProcessor>ОМ_Парсер_ПарсерВстроенногоЯзыкаБазовыеБоки</DataProcessor>
 			<DataProcessor>ОМ_Парсер_ГлобальноеОкружение</DataProcessor>
 			<DataProcessor>ОМ_Парсер_ПлагинАнализМодуля</DataProcessor>
 			<DataProcessor>ОМ_Компонент_РасстановкаОбластей</DataProcessor>
