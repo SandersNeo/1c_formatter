@@ -22,6 +22,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОМ_КлиентИИ</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Role.ОМ_ОсновнаяРоль</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ОМ_ТипыЭлементовМодуля</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ОМ_ГрупповоеОформлениеМодулей</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects>

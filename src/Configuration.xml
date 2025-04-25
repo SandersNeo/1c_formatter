@@ -84,6 +84,7 @@
 			<DataProcessor>ОМ_Компонент_ВставкаЗавершающихКомментариев</DataProcessor>
 			<DataProcessor>ОМ_Компонент_СортировкаМетодов</DataProcessor>
 			<DataProcessor>ОМ_Компонент_ОформлениеТелаМетодов</DataProcessor>
+			<DataProcessor>ОМ_ГрупповоеОформлениеМодулей</DataProcessor>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>
