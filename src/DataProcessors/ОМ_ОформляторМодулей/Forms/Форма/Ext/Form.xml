@@ -774,17 +774,14 @@
 															</ToolTip>
 															<ExtendedTooltip name="ГруппаПараметрыПодпрограммыСтраницаТекстРасширеннаяПодсказка" id="180"/>
 															<ChildItems>
-																<InputField name="Текст1" id="181">
+																<TextDocumentField name="Текст1" id="181">
 																	<DataPath>Текст</DataPath>
 																	<ReadOnly>true</ReadOnly>
 																	<TitleLocation>None</TitleLocation>
-																	<AutoMaxWidth>false</AutoMaxWidth>
-																	<MultiLine>true</MultiLine>
-																	<ExtendedEdit>true</ExtendedEdit>
 																	<Font ref="style:NormalTextFont" faceName="Courier New" kind="StyleItem"/>
 																	<ContextMenu name="Текст1КонтекстноеМеню" id="182"/>
 																	<ExtendedTooltip name="Текст1РасширеннаяПодсказка" id="183"/>
-																</InputField>
+																</TextDocumentField>
 															</ChildItems>
 														</Page>
 														<Page name="ГруппаПараметрыПодпрограммыСтраницаПрепроцессор" id="211">
