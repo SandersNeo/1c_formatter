@@ -83,6 +83,7 @@
 					<v8:content>Группа страницы</v8:content>
 				</v8:item>
 			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
 			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="2"/>
 			<ChildItems>
 				<Page name="Метод" id="3">
