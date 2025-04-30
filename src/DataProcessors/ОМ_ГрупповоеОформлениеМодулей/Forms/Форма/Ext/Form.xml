@@ -8,6 +8,11 @@
 				<CommandName>Form.Command.Оформить</CommandName>
 				<ExtendedTooltip name="ФормаОформитьРасширеннаяПодсказка" id="33"/>
 			</Button>
+			<Button name="ФормаСтатистика" id="38">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Статистика</CommandName>
+				<ExtendedTooltip name="ФормаСтатистикаРасширеннаяПодсказка" id="39"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<ChildItems>
@@ -25,18 +30,145 @@
 			<ContextMenu name="ПутьКВыгрузкеКонфигурацииКонтекстноеМеню" id="2"/>
 			<ExtendedTooltip name="ПутьКВыгрузкеКонфигурацииРасширеннаяПодсказка" id="3"/>
 			<Events>
+				<Event name="OnChange">ПутьКВыгрузкеКонфигурацииПриИзменении</Event>
 				<Event name="StartChoice">ПутьКВыгрузкеКонфигурацииНачалоВыбора</Event>
 			</Events>
 		</InputField>
 		<Table name="ФайлыМодулей" id="4">
 			<Representation>List</Representation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
 			<AutoInsertNewRow>true</AutoInsertNewRow>
 			<EnableStartDrag>true</EnableStartDrag>
 			<EnableDrag>true</EnableDrag>
 			<DataPath>ФайлыМодулей</DataPath>
 			<RowFilter xsi:nil="true"/>
 			<ContextMenu name="ФайлыМодулейКонтекстноеМеню" id="5"/>
-			<AutoCommandBar name="ФайлыМодулейКоманднаяПанель" id="6"/>
+			<AutoCommandBar name="ФайлыМодулейКоманднаяПанель" id="6">
+				<ChildItems>
+					<Button name="ФайлыМодулейПометитьВсе" id="34">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПометитьВсе</CommandName>
+						<ExtendedTooltip name="ФайлыМодулейПометитьВсеРасширеннаяПодсказка" id="35"/>
+					</Button>
+					<Button name="ФайлыМодулейСнятьПометкиВсе" id="36">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СнятьПометкиВсе</CommandName>
+						<ExtendedTooltip name="ФайлыМодулейСнятьПометкиВсеРасширеннаяПодсказка" id="37"/>
+					</Button>
+					<Popup name="ПодменюОформление" id="63">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Оформление</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Подменю оформление</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="ПодменюОформлениеРасширеннаяПодсказка" id="64"/>
+						<ChildItems>
+							<Popup name="ПодменюУстановитьДляВыделенных" id="65">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Установить для выделенных</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Подменю установить для выделенных</v8:content>
+									</v8:item>
+								</ToolTip>
+								<ExtendedTooltip name="ПодменюУстановитьДляВыделенныхРасширеннаяПодсказка" id="66"/>
+								<ChildItems>
+									<Button name="ФайлыМодулейУстановитьФлагРасстановкаОбластей" id="69">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстановитьФлагРасстановкаОбластей</CommandName>
+										<ExtendedTooltip name="ФайлыМодулейУстановитьФлагРасстановкаОбластейРасширеннаяПодсказка" id="70"/>
+									</Button>
+									<Button name="ФайлыМодулейУстановитьФлагФорматирование" id="71">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстановитьФлагФорматирование</CommandName>
+										<ExtendedTooltip name="ФайлыМодулейУстановитьФлагФорматированиеРасширеннаяПодсказка" id="72"/>
+									</Button>
+									<Button name="ФайлыМодулейУстановитьФлагДокументированиеПрограммногоИнтерфейса" id="73">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстановитьФлагДокументированиеПрограммногоИнтерфейса</CommandName>
+										<ExtendedTooltip name="ФайлыМодулейУстановитьФлагДокументированиеПрограммногоИнтерфейсаРасширеннаяПодсказка" id="74"/>
+									</Button>
+									<Button name="ФайлыМодулейУстановитьФлагИсключениеКомпиляцииНаКлиенте" id="75">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстановитьФлагИсключениеКомпиляцииНаКлиенте</CommandName>
+										<ExtendedTooltip name="ФайлыМодулейУстановитьФлагИсключениеКомпиляцииНаКлиентеРасширеннаяПодсказка" id="76"/>
+									</Button>
+									<Button name="ФайлыМодулейУстановитьФлагСортировкаСлужебныхМетодов" id="77">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстановитьФлагСортировкаСлужебныхМетодов</CommandName>
+										<ExtendedTooltip name="ФайлыМодулейУстановитьФлагСортировкаСлужебныхМетодовРасширеннаяПодсказка" id="78"/>
+									</Button>
+									<Button name="ФайлыМодулейУстановитьФлагЗавершающийКомментарийМетодов" id="79">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстановитьФлагЗавершающийКомментарийМетодов</CommandName>
+										<ExtendedTooltip name="ФайлыМодулейУстановитьФлагЗавершающийКомментарийМетодовРасширеннаяПодсказка" id="80"/>
+									</Button>
+								</ChildItems>
+							</Popup>
+							<Popup name="ПодменюСнятьДляВыделенных" id="67">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Снять для выделенных</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Подменю снять для выделенных</v8:content>
+									</v8:item>
+								</ToolTip>
+								<ExtendedTooltip name="ПодменюСнятьДляВыделенныхРасширеннаяПодсказка" id="68"/>
+								<ChildItems>
+									<Button name="ФайлыМодулейСнятьФлагРасстановкаОбластей" id="81">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СнятьФлагРасстановкаОбластей</CommandName>
+										<ExtendedTooltip name="ФайлыМодулейСнятьФлагРасстановкаОбластейРасширеннаяПодсказка" id="82"/>
+									</Button>
+									<Button name="ФайлыМодулейСнятьФлагФорматирование" id="83">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СнятьФлагФорматирование</CommandName>
+										<ExtendedTooltip name="ФайлыМодулейСнятьФлагФорматированиеРасширеннаяПодсказка" id="84"/>
+									</Button>
+									<Button name="ФайлыМодулейСнятьФлагДокументированиеПрограммногоИнтерфейса" id="85">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СнятьФлагДокументированиеПрограммногоИнтерфейса</CommandName>
+										<ExtendedTooltip name="ФайлыМодулейСнятьФлагДокументированиеПрограммногоИнтерфейсаРасширеннаяПодсказка" id="86"/>
+									</Button>
+									<Button name="ФайлыМодулейСнятьФлагИсключениеКомпиляцииНаКлиенте" id="87">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СнятьФлагИсключениеКомпиляцииНаКлиенте</CommandName>
+										<ExtendedTooltip name="ФайлыМодулейСнятьФлагИсключениеКомпиляцииНаКлиентеРасширеннаяПодсказка" id="88"/>
+									</Button>
+									<Button name="ФайлыМодулейСнятьФлагСортировкаСлужебныхМетодов" id="89">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СнятьФлагСортировкаСлужебныхМетодов</CommandName>
+										<ExtendedTooltip name="ФайлыМодулейСнятьФлагСортировкаСлужебныхМетодовРасширеннаяПодсказка" id="90"/>
+									</Button>
+									<Button name="ФайлыМодулейСнятьФлагДокументированиеПрограммногоИнтерфейса1" id="91">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СнятьФлагДокументированиеПрограммногоИнтерфейса</CommandName>
+										<ExtendedTooltip name="ФайлыМодулейСнятьФлагДокументированиеПрограммногоИнтерфейса1РасширеннаяПодсказка" id="92"/>
+									</Button>
+								</ChildItems>
+							</Popup>
+						</ChildItems>
+					</Popup>
+				</ChildItems>
+			</AutoCommandBar>
 			<ExtendedTooltip name="ФайлыМодулейРасширеннаяПодсказка" id="7"/>
 			<SearchStringAddition name="ФайлыМодулейСтрокаПоиска" id="8">
 				<AdditionSource>
@@ -78,6 +210,7 @@
 				</CheckBoxField>
 				<InputField name="ФайлыМодулейИмяФайлаМодуля" id="17">
 					<DataPath>ФайлыМодулей.ИмяФайлаМодуля</DataPath>
+					<ReadOnly>true</ReadOnly>
 					<EditMode>EnterOnInput</EditMode>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 					<ContextMenu name="ФайлыМодулейИмяФайлаМодуляКонтекстноеМеню" id="18"/>
@@ -85,6 +218,7 @@
 				</InputField>
 				<InputField name="ФайлыМодулейТипОбъектаМД" id="20">
 					<DataPath>ФайлыМодулей.ТипОбъектаМД</DataPath>
+					<ReadOnly>true</ReadOnly>
 					<EditMode>EnterOnInput</EditMode>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 					<ContextMenu name="ФайлыМодулейТипОбъектаМДКонтекстноеМеню" id="21"/>
@@ -92,6 +226,7 @@
 				</InputField>
 				<InputField name="ФайлыМодулейИмяОбъектаМД" id="23">
 					<DataPath>ФайлыМодулей.ИмяОбъектаМД</DataPath>
+					<ReadOnly>true</ReadOnly>
 					<EditMode>EnterOnInput</EditMode>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 					<ContextMenu name="ФайлыМодулейИмяОбъектаМДКонтекстноеМеню" id="24"/>
@@ -99,6 +234,7 @@
 				</InputField>
 				<InputField name="ФайлыМодулейОтносительныйПуть" id="29">
 					<DataPath>ФайлыМодулей.ОтносительныйПуть</DataPath>
+					<ReadOnly>true</ReadOnly>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -110,6 +246,139 @@
 					<ContextMenu name="ФайлыМодулейОтносительныйПутьКонтекстноеМеню" id="30"/>
 					<ExtendedTooltip name="ФайлыМодулейОтносительныйПутьРасширеннаяПодсказка" id="31"/>
 				</InputField>
+				<ColumnGroup name="ФайлыМодулейГруппаОформление" id="58">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оформление</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оформление</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="ФайлыМодулейГруппаОформлениеРасширеннаяПодсказка" id="59"/>
+					<ChildItems>
+						<CheckBoxField name="ФайлыМодулейРасстановкаОбластей" id="55">
+							<DataPath>ФайлыМодулей.РасстановкаОбластей</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Обл</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Расстановка областей</v8:content>
+								</v8:item>
+							</ToolTip>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ФайлыМодулейРасстановкаОбластейКонтекстноеМеню" id="56"/>
+							<ExtendedTooltip name="ФайлыМодулейРасстановкаОбластейРасширеннаяПодсказка" id="57"/>
+						</CheckBoxField>
+						<CheckBoxField name="ФайлыМодулейФорматирование" id="40">
+							<DataPath>ФайлыМодулей.Форматирование</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Фмт</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Форматирование тела методов, кода модулей</v8:content>
+								</v8:item>
+							</ToolTip>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ФайлыМодулейФорматированиеКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="ФайлыМодулейФорматированиеРасширеннаяПодсказка" id="42"/>
+						</CheckBoxField>
+						<CheckBoxField name="ФайлыМодулейДокументированиеПрограммногоИнтерфейса" id="43">
+							<DataPath>ФайлыМодулей.ДокументированиеПрограммногоИнтерфейса</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Док</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Документирование программного интерфейса</v8:content>
+								</v8:item>
+							</ToolTip>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ФайлыМодулейДокументированиеПрограммногоИнтерфейсаКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="ФайлыМодулейДокументированиеПрограммногоИнтерфейсаРасширеннаяПодсказка" id="45"/>
+						</CheckBoxField>
+						<CheckBoxField name="ФайлыМодулейИсключениеКомпиляцииНаКлиенте" id="60">
+							<DataPath>ФайлыМодулей.ИсключениеКомпиляцииНаКлиенте</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Преп</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Исключение компиляции на клиенте (директива #Если Сервер Или ТолстыйКлиент..)</v8:content>
+								</v8:item>
+							</ToolTip>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ФайлыМодулейИсключениеКомпиляцииНаКлиентеКонтекстноеМеню" id="61"/>
+							<ExtendedTooltip name="ФайлыМодулейИсключениеКомпиляцииНаКлиентеРасширеннаяПодсказка" id="62"/>
+						</CheckBoxField>
+						<CheckBoxField name="ФайлыМодулейСортировкаСлужебныхМетодов" id="49">
+							<DataPath>ФайлыМодулей.СортировкаСлужебныхМетодов</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сорт</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сортировка методов в области СлужебныеПроцедурыИФункции</v8:content>
+								</v8:item>
+							</ToolTip>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ФайлыМодулейСортировкаСлужебныхМетодовКонтекстноеМеню" id="50"/>
+							<ExtendedTooltip name="ФайлыМодулейСортировкаСлужебныхМетодовРасширеннаяПодсказка" id="51"/>
+						</CheckBoxField>
+						<CheckBoxField name="ФайлыМодулейЗавершающийКомментарийМетодов" id="52">
+							<DataPath>ФайлыМодулей.ЗавершающийКомментарийМетодов</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЗКом</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Завершающий комментарий методов</v8:content>
+								</v8:item>
+							</ToolTip>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ФайлыМодулейЗавершающийКомментарийМетодовКонтекстноеМеню" id="53"/>
+							<ExtendedTooltip name="ФайлыМодулейЗавершающийКомментарийМетодовРасширеннаяПодсказка" id="54"/>
+						</CheckBoxField>
+					</ChildItems>
+				</ColumnGroup>
 			</ChildItems>
 		</Table>
 	</ChildItems>
@@ -217,8 +486,143 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
+				<Column name="РасстановкаОбластей" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расстановка областей</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Форматирование" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Форматирование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДокументированиеПрограммногоИнтерфейса" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документирование программного интерфейса</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИсключениеКомпиляцииНаКлиенте" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исключение компиляции на клиенте</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СортировкаСлужебныхМетодов" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сортировка служебных методов</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЗавершающийКомментарийМетодов" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Завершающий комментарий методов</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
 			</Columns>
 		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ФайлыМодулей</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ФайлыМодулей.Пометка</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Gainsboro</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ФайлыМодулейФорматирование</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ФайлыМодулейРасстановкаОбластей</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ФайлыМодулейФорматирование</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ФайлыМодулейДокументированиеПрограммногоИнтерфейса</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ФайлыМодулейИсключениеКомпиляцииНаКлиенте</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ФайлыМодулейСортировкаСлужебныхМетодов</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ФайлыМодулейЗавершающийКомментарийМетодов</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ФайлыМодулей.Пометка</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Gainsboro</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Доступность</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Отображать</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
 	</Attributes>
 	<Commands>
 		<Command name="Оформить" id="1">
@@ -235,6 +639,239 @@
 				</v8:item>
 			</ToolTip>
 			<Action>Оформить</Action>
+		</Command>
+		<Command name="ПометитьВсе" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометить все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометить все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПометитьВсе</Action>
+		</Command>
+		<Command name="СнятьПометкиВсе" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять пометки все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять пометки все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьПометкиВсе</Action>
+		</Command>
+		<Command name="Статистика" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статистика</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статистика</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Статистика</Action>
+		</Command>
+		<Command name="УстановитьФлагРасстановкаОбластей" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расстановка областей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флаг расстановка областей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьФлагРасстановкаОбластей</Action>
+		</Command>
+		<Command name="УстановитьФлагФорматирование" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форматирование тела методов, кода модулей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флаг форматирование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьФлагФорматирование</Action>
+		</Command>
+		<Command name="УстановитьФлагДокументированиеПрограммногоИнтерфейса" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документирование программного интерфейса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флаг документирование программного интерфейса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьФлагДокументированиеПрограммногоИнтерфейса</Action>
+		</Command>
+		<Command name="УстановитьФлагИсключениеКомпиляцииНаКлиенте" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исключение компиляции на клиенте (директива #Если Сервер...)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флаг исключение компиляции на клиенте</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьФлагИсключениеКомпиляцииНаКлиенте</Action>
+		</Command>
+		<Command name="УстановитьФлагСортировкаСлужебныхМетодов" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сортировка методов в области СлужебныеПроцедурыИФункции</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флаг сортировка служебных методов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьФлагСортировкаСлужебныхМетодов</Action>
+		</Command>
+		<Command name="УстановитьФлагЗавершающийКомментарийМетодов" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершающий комментарий методов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флаг завершающий комментарий методов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьФлагЗавершающийКомментарийМетодов</Action>
+		</Command>
+		<Command name="СнятьФлагРасстановкаОбластей" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расстановка областей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флаг расстановка областей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СнятьФлагРасстановкаОбластей</Action>
+		</Command>
+		<Command name="СнятьФлагФорматирование" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форматирование тела методов, кода модулей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флаг форматирование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СнятьФлагФорматирование</Action>
+		</Command>
+		<Command name="СнятьФлагДокументированиеПрограммногоИнтерфейса" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документирование программного интерфейса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флаг документирование программного интерфейса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СнятьФлагДокументированиеПрограммногоИнтерфейса</Action>
+		</Command>
+		<Command name="СнятьФлагЗавершающийКомментарийМетодов" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершающий комментарий методов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флаг завершающий комментарий методов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СнятьФлагЗавершающийКомментарийМетодов</Action>
+		</Command>
+		<Command name="СнятьФлагИсключениеКомпиляцииНаКлиенте" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исключение компиляции на клиенте (директива #Если Сервер...)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флаг исключение компиляции на клиенте</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СнятьФлагИсключениеКомпиляцииНаКлиенте</Action>
+		</Command>
+		<Command name="СнятьФлагСортировкаСлужебныхМетодов" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сортировка методов в области СлужебныеПроцедурыИФункции</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флаг сортировка служебных методов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СнятьФлагСортировкаСлужебныхМетодов</Action>
 		</Command>
 	</Commands>
 </Form>
