@@ -71,6 +71,7 @@
 			<CommonPicture>ОМ_ТипыЭлементовМодуля</CommonPicture>
 			<Role>ОМ_ОсновнаяРоль</Role>
 			<CommonModule>ОМ_КлиентИИ</CommonModule>
+			<CommonModule>ОМ_ДокументированиеМетодовКлиентСервер</CommonModule>
 			<DataProcessor>ОМ_ОформляторМодулей</DataProcessor>
 			<DataProcessor>ОМ_Парсер_ПарсерВстроенногоЯзыка</DataProcessor>
 			<DataProcessor>ОМ_Парсер_ПарсерВстроенногоЯзыкаБазовыеБоки</DataProcessor>
