@@ -73,6 +73,7 @@
 			<CommonModule>ОМ_КлиентИИ</CommonModule>
 			<CommonModule>ОМ_ДокументированиеМетодовКлиентСервер</CommonModule>
 			<DataProcessor>ОМ_ОформляторМодулей</DataProcessor>
+			<DataProcessor>ОМ_ГрупповоеОформлениеМодулей</DataProcessor>
 			<DataProcessor>ОМ_Парсер_ПарсерВстроенногоЯзыка</DataProcessor>
 			<DataProcessor>ОМ_Парсер_ПарсерВстроенногоЯзыкаБазовыеБоки</DataProcessor>
 			<DataProcessor>ОМ_Парсер_ГлобальноеОкружение</DataProcessor>
@@ -85,7 +86,6 @@
 			<DataProcessor>ОМ_Компонент_ВставкаЗавершающихКомментариев</DataProcessor>
 			<DataProcessor>ОМ_Компонент_СортировкаМетодов</DataProcessor>
 			<DataProcessor>ОМ_Компонент_ОформлениеТелаМетодов</DataProcessor>
-			<DataProcessor>ОМ_ГрупповоеОформлениеМодулей</DataProcessor>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>
