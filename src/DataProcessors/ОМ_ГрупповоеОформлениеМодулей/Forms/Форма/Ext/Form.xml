@@ -4,28 +4,62 @@
 	<SaveDataInSettings>UseList</SaveDataInSettings>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
-			<Button name="ФормаОформить" id="32">
-				<Type>CommandBarButton</Type>
-				<DefaultButton>true</DefaultButton>
-				<CommandName>Form.Command.Оформить</CommandName>
-				<ExtendedTooltip name="ФормаОформитьРасширеннаяПодсказка" id="33"/>
-			</Button>
-			<Button name="ФормаСтатистика" id="38">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.Статистика</CommandName>
-				<ExtendedTooltip name="ФормаСтатистикаРасширеннаяПодсказка" id="39"/>
-			</Button>
-			<Button name="ФормаНастройка" id="93">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.Настройка</CommandName>
+			<ButtonGroup name="ФормаГруппаОформление" id="97">
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Настройка...</v8:content>
+						<v8:content>Форма группа оформление</v8:content>
 					</v8:item>
 				</Title>
-				<ExtendedTooltip name="ФормаНастройкаРасширеннаяПодсказка" id="94"/>
-			</Button>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма группа оформление</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ФормаГруппаОформлениеРасширеннаяПодсказка" id="98"/>
+				<ChildItems>
+					<Button name="ФормаОформить" id="32">
+						<Type>CommandBarButton</Type>
+						<DefaultButton>true</DefaultButton>
+						<CommandName>Form.Command.Оформить</CommandName>
+						<ExtendedTooltip name="ФормаОформитьРасширеннаяПодсказка" id="33"/>
+					</Button>
+					<Button name="ФормаНастройка" id="93">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Настройка</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Настройка...</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ФормаНастройкаРасширеннаяПодсказка" id="94"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+			<ButtonGroup name="ФормаГруппаСтатистика" id="99">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма группа статистика</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма группа статистика</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ФормаГруппаСтатистикаРасширеннаяПодсказка" id="100"/>
+				<ChildItems>
+					<Button name="ФормаСтатистика" id="38">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Статистика</CommandName>
+						<ExtendedTooltip name="ФормаСтатистикаРасширеннаяПодсказка" id="39"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
 		</ChildItems>
 	</AutoCommandBar>
 	<ChildItems>
