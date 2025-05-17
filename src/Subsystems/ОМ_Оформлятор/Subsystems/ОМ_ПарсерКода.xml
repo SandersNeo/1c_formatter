@@ -19,7 +19,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ОМ_Парсер_ПарсерВстроенногоЯзыка</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ОМ_Парсер_ГлобальноеОкружение</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ОМ_Парсер_ПлагинАнализМодуля</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ОМ_Парсер_ПарсерВстроенногоЯзыкаБазовыеБоки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ОМ_Парсер_ПарсерВстроенногоЯзыкаБазовый</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>
